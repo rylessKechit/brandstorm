@@ -13,6 +13,19 @@ const inter = Inter({
   display: 'swap',
 })
 
+// Fonction utilitaire pour les URLs
+function getBaseUrl() {
+  if (process.env.NEXT_PUBLIC_APP_URL) {
+    return process.env.NEXT_PUBLIC_APP_URL
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`
+  }
+  return 'http://localhost:3000'
+}
+
+const baseUrl = getBaseUrl()
+
 export const metadata: Metadata = {
   title: {
     default: 'BrandStorm - Premium Digital Marketing SaaS',
@@ -43,14 +56,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'https://brandstorm.com'),
+  metadataBase: new URL(baseUrl),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: process.env.NEXT_PUBLIC_APP_URL ?? 'https://brandstorm.com',
+    url: baseUrl,
     title: 'BrandStorm - Premium Digital Marketing SaaS',
     description: 'The SaaS platform revolutionizing digital marketing in the Middle East. AI Analytics + Automation + Guaranteed ROI.',
     siteName: 'BrandStorm',
@@ -141,8 +154,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
               '@context': 'https://schema.org',
               '@type': 'SoftwareApplication',
               name: 'BrandStorm',
-              url: process.env.NEXT_PUBLIC_APP_URL,
-              logo: `${process.env.NEXT_PUBLIC_APP_URL}/logo.png`,
+              url: baseUrl,
+              logo: `${baseUrl}/logo.png`,
               description: 'Premium SaaS platform for digital marketing in the Middle East',
               applicationCategory: 'BusinessApplication',
               operatingSystem: 'Web',
@@ -159,7 +172,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               creator: {
                 '@type': 'Organization',
                 name: 'BrandStorm',
-                url: process.env.NEXT_PUBLIC_APP_URL,
+                url: baseUrl,
               },
             }),
           }}
