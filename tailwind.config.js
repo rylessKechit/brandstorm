@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -49,10 +50,6 @@ module.exports = {
           900: '#78350f',
           950: '#451a03',
         },
-        // Custom gradient stops
-        'gradient-start': '#ff0080',
-        'gradient-middle': '#7928ca',
-        'gradient-end': '#00dfd8',
       },
 
       // Custom fonts
@@ -62,28 +59,15 @@ module.exports = {
         display: ['Cal Sans', 'Inter', 'system-ui', 'sans-serif'],
       },
 
-      // Custom spacing
-      spacing: {
-        '18': '4.5rem',
-        '88': '22rem',
-        '128': '32rem',
-      },
-
       // Custom animations
       animation: {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
-        'gradient-xy': 'gradient-xy 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
         'spin-slow': 'spin 8s linear infinite',
         'wiggle': 'wiggle 1s ease-in-out infinite',
-        'fade-in': 'fade-in 0.5s ease-out',
-        'fade-in-up': 'fade-in-up 0.5s ease-out',
-        'scale-in': 'scale-in 0.2s ease-out',
-        'slide-in-right': 'slide-in-right 0.3s ease-out',
-        'slide-in-left': 'slide-in-left 0.3s ease-out',
       },
 
       // Custom keyframes
@@ -108,16 +92,6 @@ module.exports = {
             'background-position': 'right center'
           }
         },
-        'gradient-xy': {
-          '0%, 100%': {
-            'background-size': '400% 400%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          }
-        },
         'float': {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' }
@@ -126,26 +100,6 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' }
         },
-        'fade-in': {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' }
-        },
-        'fade-in-up': {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' }
-        },
-        'scale-in': {
-          '0%': { opacity: '0', transform: 'scale(0.9)' },
-          '100%': { opacity: '1', transform: 'scale(1)' }
-        },
-        'slide-in-right': {
-          '0%': { opacity: '0', transform: 'translateX(20px)' },
-          '100%': { opacity: '1', transform: 'translateX(0)' }
-        },
-        'slide-in-left': {
-          '0%': { opacity: '0', transform: 'translateX(-20px)' },
-          '100%': { opacity: '1', transform: 'translateX(0)' }
-        }
       },
 
       // Custom backgrounds
@@ -185,12 +139,6 @@ module.exports = {
         '10xl': ['10rem', { lineHeight: '1' }],
       },
 
-      // Custom line heights
-      lineHeight: {
-        'extra-loose': '2.5',
-        '12': '3rem',
-      },
-
       // Custom z-index
       zIndex: {
         '60': '60',
@@ -212,17 +160,7 @@ module.exports = {
         '102': '1.02',
         '103': '1.03',
       },
-
-      // Custom transitions
-      transitionDuration: {
-        '2000': '2000ms',
-        '3000': '3000ms',
-      },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [],
 }

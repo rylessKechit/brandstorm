@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import { Hero } from '@/components/sections/Hero'
 import { Features } from '@/components/sections/Features'
 import { Services } from '@/components/sections/Services'
@@ -12,16 +11,6 @@ import { FAQ } from '@/components/sections/FAQ'
 import { CTA } from '@/components/sections/CTA'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-
-export const metadata: Metadata = {
-  title: 'BrandStorm - Premium Digital Marketing SaaS Platform',
-  description: 'The SaaS platform revolutionizing digital marketing in the Middle East. AI Analytics + Automation + Guaranteed ROI. Start your free trial today.',
-  openGraph: {
-    title: 'BrandStorm - Premium Digital Marketing SaaS Platform',
-    description: 'The SaaS platform revolutionizing digital marketing in the Middle East. AI Analytics + Automation + Guaranteed ROI.',
-    images: ['/og-home.png'],
-  },
-}
 
 export default function HomePage() {
   return (
