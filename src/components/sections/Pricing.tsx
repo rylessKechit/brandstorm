@@ -3,12 +3,13 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Check, Star, Zap } from 'lucide-react'
+import { Check, Star, Zap, DollarSign } from 'lucide-react'
 
 const plans = [
   {
     name: "Starter",
-    price: "299",
+    priceUSD: "299",
+    priceAED: "1,099",
     period: "month",
     description: "Perfect for small businesses getting started",
     features: [
@@ -23,7 +24,8 @@ const plans = [
   },
   {
     name: "Professional", 
-    price: "699",
+    priceUSD: "699",
+    priceAED: "2,569",
     period: "month",
     description: "For growing businesses that want more",
     features: [
@@ -41,7 +43,8 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: "1499", 
+    priceUSD: "1499", 
+    priceAED: "5,509",
     period: "month",
     description: "For established businesses ready to scale",
     features: [
@@ -62,10 +65,28 @@ const plans = [
 export function Pricing() {
   const [isVisible, setIsVisible] = useState(false)
   const [isAnnual, setIsAnnual] = useState(false)
+  const [currency, setCurrency] = useState<'USD' | 'AED'>('AED') // Default to AED for MENA market
 
   useEffect(() => {
     setIsVisible(true)
   }, [])
+
+  const getPrice = (plan: typeof plans[0]) => {
+    const basePrice = currency === 'USD' ? parseInt(plan.priceUSD) : parseInt(plan.priceAED.replace(',', ''))
+    return isAnnual ? Math.round(basePrice * 0.8) : basePrice
+  }
+
+  const formatPrice = (price: number) => {
+    if (currency === 'AED') {
+      return `${price.toLocaleString()} AED`
+    } else {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+      }).format(price)
+    }
+  }
 
   return (
     <section id="pricing" className="relative py-20 px-6">
@@ -77,8 +98,34 @@ export function Pricing() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your business growth
+            Choose the perfect plan for your business growth in the MENA region
           </p>
+          
+          {/* Currency Toggle */}
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-2">
+              <button
+                onClick={() => setCurrency('AED')}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  currency === 'AED' 
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white' 
+                    : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                🇦🇪 AED
+              </button>
+              <button
+                onClick={() => setCurrency('USD')}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  currency === 'USD' 
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white' 
+                    : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                🇺🇸 USD
+              </button>
+            </div>
+          </div>
           
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-12">
@@ -125,13 +172,18 @@ export function Pricing() {
                   <div className="mb-8">
                     <div className="flex items-baseline gap-2">
                       <span className="text-5xl font-black text-white">
-                        ${isAnnual ? Math.round(parseInt(plan.price) * 0.8) : plan.price}
+                        {formatPrice(getPrice(plan))}
                       </span>
                       <span className="text-gray-400">/{plan.period}</span>
                     </div>
                     {isAnnual && (
                       <div className="text-green-400 text-sm mt-2">
-                        Save ${Math.round(parseInt(plan.price) * 0.2 * 12)} annually
+                        Save {formatPrice(Math.round(getPrice({...plan, priceUSD: plan.priceUSD, priceAED: plan.priceAED}) * 0.2 * 12))} annually
+                      </div>
+                    )}
+                    {currency === 'AED' && (
+                      <div className="text-gray-500 text-xs mt-1">
+                        ≈ ${plan.priceUSD} USD
                       </div>
                     )}
                   </div>
@@ -162,13 +214,39 @@ export function Pricing() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-400 mb-4">Need a custom solution?</p>
+          <p className="text-gray-400 mb-4">Need a custom solution for your business?</p>
           <Link 
             href="/contact"
             className="text-pink-400 hover:text-pink-300 font-bold transition-colors duration-300"
           >
             Contact us for enterprise pricing →
           </Link>
+          
+          {/* Local Payment Methods */}
+          <div className="mt-8 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl max-w-2xl mx-auto">
+            <h4 className="text-white font-bold mb-4">💳 Local Payment Methods Accepted</h4>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-300">
+              <div className="flex items-center gap-2">
+                <span>🏦</span>
+                Emirates NBD
+              </div>
+              <div className="flex items-center gap-2">
+                <span>💸</span>
+                Bank Transfer
+              </div>
+              <div className="flex items-center gap-2">
+                <span>💳</span>
+                Credit/Debit
+              </div>
+              <div className="flex items-center gap-2">
+                <span>📱</span>
+                Apple/Google Pay
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 mt-3">
+              All prices include VAT. Invoicing available in Arabic and English.
+            </p>
+          </div>
         </div>
       </div>
     </section>
