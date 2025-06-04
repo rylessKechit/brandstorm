@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'BrandStorm - Premium Digital Marketing SaaS',
+  title: 'VIZIONAIRE - Premium Digital Marketing SaaS',
   description: 'The SaaS platform revolutionizing digital marketing in the Middle East. AI Analytics + Automation + Guaranteed ROI.',
 }
 

@@ -10,7 +10,7 @@ const testimonials = [
     company: "Tech Startup Founder",
     avatar: "👨‍💼",
     rating: 5,
-    text: "BrandStorm's AI-powered approach and MENA expertise is exactly what we needed. Professional team with genuine results."
+    text: "VIZIONAIRE's AI-powered approach and MENA expertise is exactly what we needed. Professional team with genuine results."
   },
   {
     name: "Sarah M.", 
@@ -45,7 +45,7 @@ const testimonials = [
     company: "Healthcare Clinic Owner",
     avatar: "👩‍⚕️",
     rating: 5,
-    text: "BrandStorm combines global best practices with local market knowledge. Exactly what growing businesses in Dubai need."
+    text: "VIZIONAIRE combines global best practices with local market knowledge. Exactly what growing businesses in Dubai need."
   }
 ]
 

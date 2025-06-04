@@ -5,7 +5,7 @@ import { Cookie, Settings, BarChart, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Cookie Policy - How We Use Cookies',
-  description: 'Learn about how BrandStorm uses cookies and similar technologies to improve your browsing experience.',
+  description: 'Learn about how VIZIONAIRE uses cookies and similar technologies to improve your browsing experience.',
 }
 
 export default function CookiesPage() {

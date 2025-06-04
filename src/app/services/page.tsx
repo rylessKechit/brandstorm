@@ -323,7 +323,7 @@ export default function ServicesPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
                 <span className="bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">
-                  Why Choose BrandStorm?
+                  Why Choose VIZIONAIRE?
                 </span>
               </h2>
             </div>

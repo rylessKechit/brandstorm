@@ -25,7 +25,7 @@ export function Stats() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-8">
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Why Choose BrandStorm
+              Why Choose VIZIONAIRE
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">

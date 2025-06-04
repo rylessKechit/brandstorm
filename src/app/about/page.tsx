@@ -6,7 +6,7 @@ import { Users, Target, Globe, Award, ArrowRight, Zap, TrendingUp } from 'lucide
 
 export const metadata: Metadata = {
   title: 'About Us - Our Story & Mission',
-  description: 'Learn about BrandStorm\'s mission to revolutionize digital marketing in the Middle East with AI-powered solutions.',
+  description: 'Learn about VIZIONAIRE\'s mission to revolutionize digital marketing in the Middle East with AI-powered solutions.',
 }
 
 const team = [
@@ -240,7 +240,7 @@ export default function AboutPage() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of businesses that have transformed their digital presence with BrandStorm
+              Join hundreds of businesses that have transformed their digital presence with VIZIONAIRE
             </p>
             <Link
               href="/contact"

@@ -20,7 +20,7 @@ const caseStudies = [
       { metric: "Instagram Followers", value: "0 → 85K", period: "8 months" },
       { metric: "Return on Ad Spend", value: "6.2x", period: "Average" }
     ],
-    testimonial: "BrandStorm transformed our unknown brand into a regional sensation. We went from zero to hero in less than a year!",
+    testimonial: "VIZIONAIRE transformed our unknown brand into a regional sensation. We went from zero to hero in less than a year!",
     client: "Layla Mohammed, Founder",
     image: "👗",
     color: "from-pink-500 to-rose-600"
@@ -50,7 +50,7 @@ const caseStudies = [
       { metric: "Foot Traffic", value: "180%", period: "6 months" },
       { metric: "Social Engagement", value: "400%", period: "Monthly" }
     ],
-    testimonial: "Every location is now profitable and we're expanding to 3 more cities. BrandStorm made the impossible possible!",
+    testimonial: "Every location is now profitable and we're expanding to 3 more cities. VIZIONAIRE made the impossible possible!",
     client: "Khalid Bin Rashid, Owner",
     image: "🍔",
     color: "from-orange-500 to-red-600"

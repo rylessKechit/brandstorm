@@ -10,7 +10,7 @@ const faqs = [
     answer: "We can typically start within 48 hours of contract signing. Our onboarding process is streamlined to get you results as quickly as possible."
   },
   {
-    question: "What makes BrandStorm different from other agencies?",
+    question: "What makes VIZIONAIRE different from other agencies?",
     answer: "We specialize in the MENA market, use cutting-edge AI technology, and guarantee ROI. Plus, we handle everything from strategy to execution in-house."
   },
   {
@@ -57,7 +57,7 @@ export function FAQ() {
             </span>
           </h2>
           <p className="text-xl text-gray-300">
-            Everything you need to know about working with BrandStorm
+            Everything you need to know about working with VIZIONAIRE
           </p>
         </div>
 

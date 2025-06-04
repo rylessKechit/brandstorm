@@ -1,4 +1,4 @@
-# 🚀 BrandStorm SaaS - Digital Marketing Platform
+# 🚀 VIZIONAIRE SaaS - Digital Marketing Platform
 
 A premium SaaS platform revolutionizing digital marketing in the Middle East. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
@@ -197,7 +197,7 @@ Create a `.env.local` file in the root directory:
 ```env
 # App
 NEXT_PUBLIC_APP_URL=http://localhost:3000
-NEXT_PUBLIC_APP_NAME="BrandStorm"
+NEXT_PUBLIC_APP_NAME="VIZIONAIRE"
 
 # Database
 DATABASE_URL="postgresql://username:password@localhost:5432/vizionaire"

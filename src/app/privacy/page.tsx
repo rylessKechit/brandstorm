@@ -5,7 +5,7 @@ import { Shield, Lock, Eye, FileText } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - How We Protect Your Data',
-  description: 'Learn how BrandStorm protects your personal information and respects your privacy.',
+  description: 'Learn how VIZIONAIRE protects your personal information and respects your privacy.',
 }
 
 export default function PrivacyPage() {

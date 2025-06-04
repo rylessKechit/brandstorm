@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // Custom colors for BrandStorm
+      // Custom colors for VIZIONAIRE
       colors: {
         // Primary gradient colors
         primary: {

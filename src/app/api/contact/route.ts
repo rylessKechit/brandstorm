@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
     const confirmationEmail = {
       to: validatedData.email,
       from: 'hello@vizionaire.com',
-      subject: 'Thank you for contacting BrandStorm!',
+      subject: 'Thank you for contacting VIZIONAIRE!',
       html: generateConfirmationTemplate(validatedData.name)
     }
 
@@ -211,7 +211,7 @@ function generateEmailTemplate(data: z.infer<typeof contactSchema>): string {
         </div>
         
         <div class="footer">
-          <p>This email was sent from the BrandStorm contact form on ${new Date().toLocaleString()}</p>
+          <p>This email was sent from the VIZIONAIRE contact form on ${new Date().toLocaleString()}</p>
           <p>Respond promptly to convert this lead! 🎯</p>
         </div>
       </div>
@@ -227,7 +227,7 @@ function generateConfirmationTemplate(name: string): string {
     <html>
     <head>
       <meta charset="utf-8">
-      <title>Thank you for contacting BrandStorm!</title>
+      <title>Thank you for contacting VIZIONAIRE!</title>
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
@@ -290,7 +290,7 @@ function generateConfirmationTemplate(name: string): string {
         </div>
         
         <div class="footer">
-          <p><strong>BrandStorm Digital Marketing</strong></p>
+          <p><strong>VIZIONAIRE Digital Marketing</strong></p>
           <p>DIFC, Dubai, UAE | hello@vizionaire.com | +971 4 123 4567</p>
           <p>Revolutionizing digital marketing in the Middle East 🇦🇪</p>
         </div>

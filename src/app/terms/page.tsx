@@ -5,7 +5,7 @@ import { FileText, Scale, AlertTriangle, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Terms of Service - Legal Terms & Conditions',
-  description: 'Read BrandStorm\'s terms of service and understand our legal terms and conditions.',
+  description: 'Read VIZIONAIRE\'s terms of service and understand our legal terms and conditions.',
 }
 
 export default function TermsPage() {
@@ -28,7 +28,7 @@ export default function TermsPage() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Please read these terms carefully before using our services. By using BrandStorm, you agree to these terms.
+              Please read these terms carefully before using our services. By using VIZIONAIRE, you agree to these terms.
             </p>
             <div className="mt-6 text-sm text-gray-400">
               Last updated: January 1, 2025
@@ -49,7 +49,7 @@ export default function TermsPage() {
                 </div>
                 
                 <div className="space-y-4 text-gray-300">
-                  <p>By accessing and using BrandStorm's website and services, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                  <p>By accessing and using VIZIONAIRE's website and services, you accept and agree to be bound by the terms and provision of this agreement.</p>
                   <p>If you do not agree to abide by the above, please do not use this service.</p>
                   <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
                     <p className="text-blue-300"><strong>Important:</strong> These terms apply to all users, including browsers, vendors, customers, merchants, and contributors of content.</p>
@@ -67,7 +67,7 @@ export default function TermsPage() {
                 <div className="space-y-6 text-gray-300">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">Digital Marketing Services</h3>
-                    <p className="mb-4">BrandStorm provides comprehensive digital marketing services including but not limited to:</p>
+                    <p className="mb-4">VIZIONAIRE provides comprehensive digital marketing services including but not limited to:</p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
                       <li>Website development and optimization</li>
                       <li>Social media management and advertising</li>
@@ -148,7 +148,7 @@ export default function TermsPage() {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">Our Rights</h3>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li>BrandStorm retains rights to our methodologies and processes</li>
+                      <li>VIZIONAIRE retains rights to our methodologies and processes</li>
                       <li>Our tools, software, and proprietary systems remain our property</li>
                       <li>We may use anonymized client data for case studies</li>
                     </ul>
@@ -183,7 +183,7 @@ export default function TermsPage() {
                     </ul>
                   </div>
                   
-                  <p>BrandStorm shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, goodwill, or other intangible losses.</p>
+                  <p>VIZIONAIRE shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, goodwill, or other intangible losses.</p>
                 </div>
               </div>
 
@@ -229,7 +229,7 @@ export default function TermsPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3">By BrandStorm</h3>
+                    <h3 className="text-xl font-bold text-white mb-3">By VIZIONAIRE</h3>
                     <ul className="list-disc list-inside space-y-2 ml-4">
                       <li>30 days notice for convenience</li>
                       <li>Immediate termination for breach of terms</li>
@@ -316,7 +316,7 @@ export default function TermsPage() {
               <div className="mb-16">
                 <h2 className="text-3xl font-black text-white mb-6">Entire Agreement</h2>
                 <div className="text-gray-300">
-                  <p>These terms, together with any signed service agreements and privacy policy, constitute the entire agreement between you and BrandStorm. They supersede all prior communications, proposals, and agreements relating to the subject matter.</p>
+                  <p>These terms, together with any signed service agreements and privacy policy, constitute the entire agreement between you and VIZIONAIRE. They supersede all prior communications, proposals, and agreements relating to the subject matter.</p>
                 </div>
               </div>
 
@@ -340,7 +340,7 @@ export default function TermsPage() {
               <div className="mb-16">
                 <div className="p-6 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
                   <h3 className="text-xl font-bold text-white mb-4">Acknowledgment</h3>
-                  <p className="text-gray-300">By using BrandStorm's services, you acknowledge that you have read, understood, and agree to be bound by these terms of service. You also acknowledge that you have the authority to enter into this agreement on behalf of your organization.</p>
+                  <p className="text-gray-300">By using VIZIONAIRE's services, you acknowledge that you have read, understood, and agree to be bound by these terms of service. You also acknowledge that you have the authority to enter into this agreement on behalf of your organization.</p>
                 </div>
               </div>
 
