@@ -1,9 +1,8 @@
-// src/components/sections/CTA.tsx
 'use client'
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Rocket, ArrowRight, Zap } from 'lucide-react'
+import { Rocket, ArrowRight, Zap, Phone } from 'lucide-react'
 
 export function CTA() {
   const [isVisible, setIsVisible] = useState(false)
@@ -102,6 +101,7 @@ export function CTA() {
               }}
             >
               <span className="relative z-10 flex items-center gap-2">
+                <Phone className="w-5 h-5" />
                 Start Your Transformation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
@@ -112,13 +112,13 @@ export function CTA() {
               href="/demo"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-2xl font-bold text-lg hover:bg-white/20 transition-all duration-500 transform hover:scale-105"
             >
-              Watch Live Demo
+              View Case Studies 🎯
             </Link>
           </div>
 
           {/* Final Trust Line */}
           <p className="text-gray-500 text-sm">
-            💡 Free consultation • No long-term contracts • Cancel anytime
+            💡 Free consultation • Custom strategy • Results guaranteed
           </p>
         </div>
       </div>

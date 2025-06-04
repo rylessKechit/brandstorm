@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navigation = [
-  { name: 'Services', href: '#services' },
-  { name: 'Pricing', href: '#pricing' },
-  { name: 'About', href: '#about' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Services', href: '/services' },
+  { name: 'About', href: '/about' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export function Header() {
@@ -57,19 +57,13 @@ export function Header() {
             ))}
           </div>
 
-          {/* Desktop CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* Desktop CTA Button */}
+          <div className="hidden lg:flex items-center">
             <Link
-              href="/login"
-              className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
+              href="/contact"
+              className="btn-primary flex items-center gap-2"
             >
-              Sign In
-            </Link>
-            <Link
-              href="/register"
-              className="btn-primary"
-            >
-              Start Free Trial
+              Get Free Consultation
             </Link>
           </div>
 
@@ -107,21 +101,14 @@ export function Header() {
               </Link>
             ))}
             
-            {/* Mobile CTA Buttons */}
-            <div className="pt-4 space-y-3 border-t border-white/10">
+            {/* Mobile CTA Button */}
+            <div className="pt-4 border-t border-white/10">
               <Link
-                href="/login"
-                className="block text-center py-3 text-gray-300 hover:text-white transition-colors duration-300 font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                Sign In
-              </Link>
-              <Link
-                href="/register"
+                href="/contact"
                 className="block text-center py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-xl font-bold transition-all duration-300 hover:scale-105"
                 onClick={() => setIsOpen(false)}
               >
-                Start Free Trial
+                Get Free Consultation
               </Link>
             </div>
           </div>

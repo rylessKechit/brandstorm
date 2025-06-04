@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Play, ArrowRight } from 'lucide-react'
+import { ChevronDown, Play, ArrowRight, Phone } from 'lucide-react'
 
 export function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -76,7 +76,7 @@ export function Hero() {
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-300">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-              🚀 Now live in Dubai & MENA region
+              🚀 Now serving Dubai & MENA region
             </div>
           </div>
 
@@ -127,14 +127,14 @@ export function Hero() {
             style={{transform: `translateZ(20px)`}}
           >
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              🚀 The SaaS platform revolutionizing digital marketing in the <span className="text-yellow-400 font-bold">Middle East</span>
+              🚀 The agency revolutionizing digital marketing in the <span className="text-yellow-400 font-bold">Middle East</span>
               <br />
               AI Analytics + Automation + <span className="text-pink-400 font-bold">GUARANTEED ROI</span>!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
               <Link
-                href="/register"
+                href="/contact"
                 className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl text-white font-bold text-lg transform hover:scale-105 transition-all duration-500 shadow-2xl hover:shadow-pink-500/30"
                 style={{
                   transform: `perspective(1000px) rotateX(${mousePosition.y * 0.05}deg) rotateY(${mousePosition.x * 0.05}deg)`,
@@ -142,8 +142,8 @@ export function Hero() {
                 }}
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  <Play className="w-5 h-5" />
-                  Start Free Trial
+                  <Phone className="w-5 h-5" />
+                  Get Free Consultation
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </Link>
@@ -156,7 +156,10 @@ export function Hero() {
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                 }}
               >
-                Watch Live Demo 🎯
+                <span className="flex items-center gap-2">
+                  <Play className="w-5 h-5" />
+                  Watch Our Work
+                </span>
               </Link>
             </div>
 
@@ -164,15 +167,15 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                14-day free trial
+                Free consultation
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                No credit card required
+                ROI Guaranteed
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                Cancel anytime
+                #1 in MENA region
               </div>
             </div>
           </div>
