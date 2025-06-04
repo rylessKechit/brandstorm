@@ -157,7 +157,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-colors"
+                        className="input-field"
                         placeholder="Your full name"
                       />
                     </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-colors"
+                        className="input-field"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-colors"
+                        className="input-field"
                         placeholder="+971 50 123 4567"
                       />
                     </div>
@@ -194,7 +194,7 @@ export default function ContactPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-colors"
+                        className="input-field"
                         placeholder="Your company name"
                       />
                     </div>
@@ -207,11 +207,11 @@ export default function ContactPage() {
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-colors"
+                        className="select-field"
                       >
                         <option value="">Select a service</option>
                         {services.map((service, i) => (
-                          <option key={i} value={service} className="bg-black">{service}</option>
+                          <option key={i} value={service} className="bg-gray-900 text-white">{service}</option>
                         ))}
                       </select>
                     </div>
@@ -221,14 +221,14 @@ export default function ContactPage() {
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-colors"
+                        className="select-field"
                       >
                         <option value="">Select budget range</option>
-                        <option value="<$500" className="bg-black">Less than $500</option>
-                        <option value="$500-$1000" className="bg-black">$500 - $1,000</option>
-                        <option value="$1000-$2500" className="bg-black">$1,000 - $2,500</option>
-                        <option value="$2500-$5000" className="bg-black">$2,500 - $5,000</option>
-                        <option value="$5000+" className="bg-black">$5,000+</option>
+                        <option value="<$500" className="bg-gray-900 text-white">Less than $500</option>
+                        <option value="$500-$1000" className="bg-gray-900 text-white">$500 - $1,000</option>
+                        <option value="$1000-$2500" className="bg-gray-900 text-white">$1,000 - $2,500</option>
+                        <option value="$2500-$5000" className="bg-gray-900 text-white">$2,500 - $5,000</option>
+                        <option value="$5000+" className="bg-gray-900 text-white">$5,000+</option>
                       </select>
                     </div>
                   </div>
@@ -240,7 +240,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-colors resize-none"
+                      className="input-field resize-none"
                       placeholder="Tell us about your project and goals..."
                     />
                   </div>
