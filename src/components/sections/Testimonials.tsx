@@ -6,46 +6,46 @@ import { Star, Quote } from 'lucide-react'
 
 const testimonials = [
   {
-    name: "Ahmed Al-Mansouri",
-    company: "CEO, TechVenture Dubai",
+    name: "Ahmed K.",
+    company: "Tech Startup Founder",
     avatar: "👨‍💼",
     rating: 5,
-    text: "BrandStorm transformed our digital presence completely. Our online sales increased by 400% in just 6 months!"
+    text: "BrandStorm's AI-powered approach and MENA expertise is exactly what we needed. Professional team with genuine results."
   },
   {
-    name: "Sarah Hassan", 
-    company: "Founder, Wellness Spa",
+    name: "Sarah M.", 
+    company: "E-commerce Business Owner",
     avatar: "👩‍💼",
     rating: 5,
-    text: "The automation they set up for us is incredible. We're now getting qualified leads 24/7 without any manual work."
+    text: "Finally found a team that understands the Middle East market. Their 90-day guarantee shows real confidence in their work."
   },
   {
-    name: "Omar Khalil",
-    company: "Marketing Director, Real Estate Group",
+    name: "Omar H.",
+    company: "Restaurant Chain Manager",
     avatar: "👨‍💻",
     rating: 5,
-    text: "Finally, a team that understands the MENA market. Our property sales doubled after working with BrandStorm."
+    text: "Setup was incredibly fast and the team is always available. Love the no-contract approach - shows they earn our business daily."
   },
   {
-    name: "Fatima Al-Zahra",
-    company: "E-commerce Store Owner", 
+    name: "Layla A.",
+    company: "Fashion Brand Owner", 
     avatar: "👩‍🦱",
     rating: 5,
-    text: "ROI of 500%+ in the first quarter. Their social media campaigns are pure magic!"
+    text: "Their AI technology and automation approach is impressive. Great to work with a team that's built specifically for our region."
   },
   {
-    name: "Khalid Bin Rashid",
-    company: "Restaurant Chain Owner",
-    avatar: "👨‍🍳",
+    name: "Hassan R.",
+    company: "Real Estate Developer",
+    avatar: "👨‍🏢",
     rating: 5,
-    text: "Our online orders increased by 300%. The team's creativity and execution are top-notch."
+    text: "Professional service with genuine expertise in MENA markets. The 48-hour setup promise was actually delivered."
   },
   {
-    name: "Layla Mohammed",
-    company: "Fashion Brand Founder",
-    avatar: "👗",
+    name: "Nour S.",
+    company: "Healthcare Clinic Owner",
+    avatar: "👩‍⚕️",
     rating: 5,
-    text: "From 0 to 100K followers in 8 months. BrandStorm made our brand a regional sensation!"
+    text: "BrandStorm combines global best practices with local market knowledge. Exactly what growing businesses in Dubai need."
   }
 ]
 

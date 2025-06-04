@@ -167,15 +167,15 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                Free consultation
+                Setup in 48 hours
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                ROI Guaranteed
+                90-Day ROI Guarantee
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                #1 in MENA region
+                MENA Specialists
               </div>
             </div>
           </div>

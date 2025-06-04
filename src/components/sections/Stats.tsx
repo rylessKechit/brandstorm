@@ -4,12 +4,12 @@
 import { useState, useEffect } from 'react'
 
 const stats = [
-  { number: "500+", label: "Happy Clients", icon: "😊" },
-  { number: "2M+", label: "Leads Generated", icon: "🎯" },
-  { number: "$50M+", label: "Revenue Generated", icon: "💰" },
-  { number: "300%", label: "Average ROI", icon: "📈" },
-  { number: "15+", label: "Countries Served", icon: "🌍" },
-  { number: "24/7", label: "Support Available", icon: "🚀" }
+  { number: "2024", label: "Founded in Dubai", icon: "🏢" },
+  { number: "48h", label: "Setup Time", icon: "⚡" },
+  { number: "90-Day", label: "ROI Guarantee", icon: "💰" },
+  { number: "24/7", label: "Support Available", icon: "🚀" },
+  { number: "MENA", label: "Market Specialists", icon: "🌍" },
+  { number: "AI-Powered", label: "Technology Stack", icon: "🤖" }
 ]
 
 export function Stats() {
@@ -25,11 +25,11 @@ export function Stats() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-8">
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Results That Speak
+              Why Choose BrandStorm
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Numbers don't lie - here's the impact we've made for our clients
+            Founded in 2024 with cutting-edge AI technology and MENA expertise
           </p>
         </div>
 

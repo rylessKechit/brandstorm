@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 interface ServiceFeature {
   feature: string
@@ -57,48 +58,6 @@ const services: Service[] = [
       { feature: "Behavioral trigger campaigns" }
     ],
     color: "from-purple-500 to-indigo-600"
-  },
-  {
-    icon: "🔍",
-    title: "SEO & Content Marketing",
-    subtitle: "Rank #1 on Google",
-    features: [
-      { feature: "Keyword research & strategy" },
-      { feature: "On-page & technical SEO" },
-      { feature: "Content creation & blogging" },
-      { feature: "Link building campaigns" },
-      { feature: "Local SEO optimization" },
-      { feature: "Monthly ranking reports" }
-    ],
-    color: "from-green-500 to-teal-600"
-  },
-  {
-    icon: "💰",
-    title: "Paid Advertising",
-    subtitle: "Maximum ROI on Every Dollar",
-    features: [
-      { feature: "Google Ads & Shopping campaigns" },
-      { feature: "Facebook & Instagram Ads" },
-      { feature: "LinkedIn & TikTok advertising" },
-      { feature: "Retargeting & remarketing" },
-      { feature: "Conversion optimization" },
-      { feature: "Real-time budget management" }
-    ],
-    color: "from-yellow-500 to-orange-600"
-  },
-  {
-    icon: "📊",
-    title: "Analytics & Reporting",
-    subtitle: "Data-Driven Decisions",
-    features: [
-      { feature: "Custom dashboard setup" },
-      { feature: "Google Analytics 4 implementation" },
-      { feature: "Conversion tracking" },
-      { feature: "ROI & performance metrics" },
-      { feature: "Monthly strategy sessions" },
-      { feature: "Competitor analysis reports" }
-    ],
-    color: "from-cyan-500 to-blue-600"
   }
 ]
 
@@ -114,14 +73,14 @@ export function Services(): JSX.Element {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-black text-center mb-8">
           <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-            Complete Digital Solutions
+            Our Core Services
           </span>
         </h2>
         <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
-          From strategy to execution, we handle every aspect of your digital presence
+          The essential services every growing business needs to succeed online
         </p>
         
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8">
           {services.map((service: Service, i: number) => (
             <div 
               key={i}
@@ -164,6 +123,20 @@ export function Services(): JSX.Element {
               </div>
             </div>
           ))}
+        </div>
+        
+        {/* Link to full services page */}
+        <div className="text-center mt-16">
+          <p className="text-gray-400 mb-6">
+            Looking for SEO, Paid Advertising, or Analytics services?
+          </p>
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-cyan-500/30"
+          >
+            View All Services
+            <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </div>
     </section>

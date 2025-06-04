@@ -7,44 +7,44 @@ const industries = [
   {
     icon: "🏪",
     title: "E-commerce & Retail",
-    description: "Boost online sales with optimized funnels and targeted campaigns",
-    clients: "50+ brands",
-    growth: "+300% ROI"
+    description: "AI-powered solutions for online stores and retail businesses",
+    clients: "Growing fast",
+    growth: "High potential"
   },
   {
     icon: "🏥",
     title: "Healthcare & Wellness",
-    description: "Patient acquisition and reputation management for medical practices",
-    clients: "25+ clinics",
-    growth: "+250% leads"
+    description: "Digital marketing strategies for medical practices and wellness brands",
+    clients: "Specialized approach",
+    growth: "Trusted results"
   },
   {
     icon: "🏠",
     title: "Real Estate",
-    description: "Generate quality leads and accelerate property sales",
-    clients: "30+ agencies",
-    growth: "+200% sales"
+    description: "Lead generation and digital presence for property developers",
+    clients: "MENA focused",
+    growth: "Market expertise"
   },
   {
     icon: "📚",
     title: "Education & Training",
-    description: "Student enrollment and course promotion strategies",
-    clients: "20+ schools",
-    growth: "+180% enrollment"
+    description: "Student acquisition and online course promotion strategies",
+    clients: "Growth oriented",
+    growth: "Modern approach"
   },
   {
     icon: "💰",
     title: "Financial Services",
-    description: "Build trust and generate leads for financial products",
-    clients: "15+ firms",
-    growth: "+220% conversions"
+    description: "Compliance-focused marketing for financial products and services",
+    clients: "Regulated expertise",
+    growth: "Trust building"
   },
   {
     icon: "🍔",
     title: "Food & Beverage",
-    description: "Drive foot traffic and online orders for restaurants",
-    clients: "40+ restaurants",
-    growth: "+160% orders"
+    description: "Local marketing strategies for restaurants and food brands",
+    clients: "Community focused",
+    growth: "Local expertise"
   }
 ]
 

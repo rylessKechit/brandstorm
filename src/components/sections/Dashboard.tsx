@@ -5,10 +5,10 @@ import { useState, useEffect } from 'react'
 import { TrendingUp, Users, DollarSign, Target } from 'lucide-react'
 
 const metrics = [
-  { icon: TrendingUp, label: "Conversion Rate", value: "12.5%", change: "+23%" },
-  { icon: Users, label: "Active Users", value: "24,567", change: "+12%" },
-  { icon: DollarSign, label: "Revenue", value: "$84,392", change: "+31%" },
-  { icon: Target, label: "ROAS", value: "4.2x", change: "+18%" }
+  { icon: TrendingUp, label: "Setup Time", value: "48h", change: "Fast Launch" },
+  { icon: Users, label: "ROI Guarantee", value: "90 Days", change: "Guaranteed" },
+  { icon: DollarSign, label: "Contract Type", value: "Flexible", change: "No Lock-in" },
+  { icon: Target, label: "Support", value: "24/7", change: "Always Available" }
 ]
 
 export function Dashboard() {

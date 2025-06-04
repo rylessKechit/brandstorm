@@ -1,13 +1,9 @@
 import { Hero } from '@/components/sections/Hero'
 import { Features } from '@/components/sections/Features'
 import { Services } from '@/components/sections/Services'
-import { Process } from '@/components/sections/Process'
-import { Industries } from '@/components/sections/Industries'
-import { Dashboard } from '@/components/sections/Dashboard'
 import { Stats } from '@/components/sections/Stats'
 import { Pricing } from '@/components/sections/Pricing'
-import { Testimonials } from '@/components/sections/Testimonials'
-import { FAQ } from '@/components/sections/FAQ'
+import { TestimonialsMini } from '@/components/sections/TestimonialsMini'
 import { CTA } from '@/components/sections/CTA'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -29,29 +25,17 @@ export default function HomePage() {
         {/* Features Section */}
         <Features />
         
-        {/* Detailed Services */}
+        {/* Services Section (Condensed) */}
         <Services />
-        
-        {/* Process Section */}
-        <Process />
-        
-        {/* Industries Section */}
-        <Industries />
-        
-        {/* Dashboard Preview */}
-        <Dashboard />
         
         {/* Stats Section */}
         <Stats />
         
+        {/* Mini Testimonials (Optional) */}
+        <TestimonialsMini />
+        
         {/* Pricing Section */}
         <Pricing />
-        
-        {/* Testimonials */}
-        <Testimonials />
-        
-        {/* FAQ Section */}
-        <FAQ />
         
         {/* Final CTA */}
         <CTA />

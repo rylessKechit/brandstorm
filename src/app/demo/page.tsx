@@ -273,7 +273,7 @@ export default function DemoPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
                 <span className="bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">
-                  Overall Impact
+                  Our Commitment
                 </span>
               </h2>
             </div>
@@ -281,26 +281,26 @@ export default function DemoPage() {
             <div className="grid md:grid-cols-4 gap-8">
               <div className="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
                 <Users className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-                <div className="text-4xl font-black text-white mb-2">500+</div>
-                <div className="text-gray-300">Happy Clients</div>
+                <div className="text-4xl font-black text-white mb-2">2024</div>
+                <div className="text-gray-300">Founded</div>
               </div>
               
               <div className="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
                 <DollarSign className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <div className="text-4xl font-black text-white mb-2">$50M+</div>
-                <div className="text-gray-300">Revenue Generated</div>
+                <div className="text-4xl font-black text-white mb-2">48h</div>
+                <div className="text-gray-300">Setup Time</div>
               </div>
               
               <div className="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
                 <TrendingUp className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <div className="text-4xl font-black text-white mb-2">300%</div>
-                <div className="text-gray-300">Average ROI</div>
+                <div className="text-4xl font-black text-white mb-2">90-Day</div>
+                <div className="text-gray-300">ROI Guarantee</div>
               </div>
               
               <div className="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
                 <CheckCircle className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
-                <div className="text-4xl font-black text-white mb-2">98%</div>
-                <div className="text-gray-300">Client Satisfaction</div>
+                <div className="text-4xl font-black text-white mb-2">24/7</div>
+                <div className="text-gray-300">Support</div>
               </div>
             </div>
           </div>

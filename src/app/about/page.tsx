@@ -125,23 +125,23 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-white/10">
                     <TrendingUp className="w-8 h-8 text-pink-400 mb-4" />
-                    <div className="text-3xl font-black text-white mb-2">500+</div>
-                    <div className="text-gray-300">Happy Clients</div>
+                    <div className="text-3xl font-black text-white mb-2">2024</div>
+                    <div className="text-gray-300">Founded</div>
                   </div>
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-white/10">
                     <Award className="w-8 h-8 text-cyan-400 mb-4" />
-                    <div className="text-3xl font-black text-white mb-2">300%</div>
-                    <div className="text-gray-300">Average ROI</div>
+                    <div className="text-3xl font-black text-white mb-2">48h</div>
+                    <div className="text-gray-300">Setup Time</div>
                   </div>
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-teal-500/10 border border-white/10">
                     <Globe className="w-8 h-8 text-green-400 mb-4" />
-                    <div className="text-3xl font-black text-white mb-2">15+</div>
-                    <div className="text-gray-300">Countries</div>
+                    <div className="text-3xl font-black text-white mb-2">MENA</div>
+                    <div className="text-gray-300">Specialists</div>
                   </div>
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-white/10">
                     <Target className="w-8 h-8 text-orange-400 mb-4" />
-                    <div className="text-3xl font-black text-white mb-2">$50M+</div>
-                    <div className="text-gray-300">Revenue Generated</div>
+                    <div className="text-3xl font-black text-white mb-2">90-Day</div>
+                    <div className="text-gray-300">ROI Guarantee</div>
                   </div>
                 </div>
               </div>
