@@ -1,35 +1,38 @@
 'use client'
 
 import { useState } from 'react'
-import { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageCircle, Zap } from 'lucide-react'
 
 const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+971 4 123 4567", "+966 11 234 5678"],
-    color: "text-green-400"
+    details: ["Request call via WhatsApp", "+971 56 566 3377"],
+    color: "text-green-400",
+    action: "call"
+  },
+  {
+    icon: MessageCircle,
+    title: "WhatsApp",
+    details: ["Instant messaging", "24/7 Support"],
+    color: "text-green-500",
+    action: "whatsapp"
   },
   {
     icon: Mail,
     title: "Email",
     details: ["hello@brandstorm.com", "support@brandstorm.com"],
-    color: "text-blue-400"
-  },
-  {
-    icon: MapPin,
-    title: "Office",
-    details: ["Dubai Marina", "DIFC, Dubai, UAE"],
-    color: "text-pink-400"
+    color: "text-blue-400",
+    action: "email"
   },
   {
     icon: Clock,
     title: "Hours",
     details: ["Sun-Thu: 9AM-6PM", "24/7 Emergency Support"],
-    color: "text-purple-400"
+    color: "text-purple-400",
+    action: "none"
   }
 ]
 
@@ -42,6 +45,30 @@ const services = [
   "Brand Strategy",
   "E-commerce Solutions",
   "Analytics & Reporting"
+]
+
+const quickActions = [
+  {
+    icon: Phone,
+    title: "Schedule Call",
+    subtitle: "Request call via WhatsApp",
+    color: "from-green-600 to-green-700",
+    action: "call"
+  },
+  {
+    icon: MessageCircle,
+    title: "WhatsApp Chat",
+    subtitle: "Instant messaging 24/7",
+    color: "from-green-500 to-green-600",
+    action: "whatsapp"
+  },
+  {
+    icon: Send,
+    title: "Quick Email",
+    subtitle: "Response within 2h",
+    color: "from-blue-600 to-blue-700",
+    action: "email"
+  }
 ]
 
 export default function ContactPage() {
@@ -75,6 +102,34 @@ export default function ContactPage() {
     })
   }
 
+  const handleCallClick = () => {
+    const message = encodeURIComponent('Hello! I would like to schedule a call to discuss your digital marketing services. When would be a good time?')
+    window.open(`https://wa.me/971565663377?text=${message}`, '_blank')
+  }
+
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent('Hello! I would like to learn more about your digital marketing services. Can you contact me?')
+    window.open(`https://wa.me/971565663377?text=${message}`, '_blank')
+  }
+
+  const handleEmailClick = () => {
+    window.open('mailto:hello@brandstorm.com?subject=Free consultation request&body=Hello, I would like to schedule a free consultation to discuss my digital marketing needs.', '_self')
+  }
+
+  const handleQuickAction = (action: string) => {
+    switch(action) {
+      case 'call':
+        handleCallClick()
+        break
+      case 'whatsapp':
+        handleWhatsAppClick()
+        break
+      case 'email':
+        handleEmailClick()
+        break
+    }
+  }
+
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
@@ -82,14 +137,23 @@ export default function ContactPage() {
           <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
           <h1 className="text-4xl font-black text-white mb-4">Message Sent!</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Thank you for reaching out. We'll get back to you within 24 hours.
+            Thank you for contacting us. We'll get back to you within 24 hours.
           </p>
-          <button 
-            onClick={() => setIsSubmitted(false)}
-            className="btn-primary"
-          >
-            Send Another Message
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={() => setIsSubmitted(false)}
+              className="btn-secondary"
+            >
+              Send Another Message
+            </button>
+            <button
+              onClick={handleWhatsAppClick}
+              className="flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold transition-all duration-300"
+            >
+              <MessageCircle className="w-5 h-5" />
+              WhatsApp for Faster Response
+            </button>
+          </div>
         </div>
       </div>
     )
@@ -119,6 +183,37 @@ export default function ContactPage() {
           </div>
         </section>
 
+        {/* Quick Actions */}
+        <section className="py-12 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-black mb-4">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                  Quick Contact
+                </span>
+              </h2>
+              <p className="text-gray-300">Choose your preferred contact method</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-16">
+              {quickActions.map((action, i) => {
+                const Icon = action.icon
+                return (
+                  <button
+                    key={i}
+                    onClick={() => handleQuickAction(action.action)}
+                    className={`group p-6 rounded-2xl bg-gradient-to-br ${action.color} text-white transition-all duration-500 transform hover:scale-105 hover:shadow-2xl`}
+                  >
+                    <Icon className="w-12 h-12 mx-auto mb-4" />
+                    <h3 className="text-xl font-bold mb-2">{action.title}</h3>
+                    <p className="text-white/80">{action.subtitle}</p>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
         {/* Contact Info */}
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
@@ -126,12 +221,26 @@ export default function ContactPage() {
               {contactInfo.map((info, i) => {
                 const Icon = info.icon
                 return (
-                  <div key={i} className="text-center p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500">
+                  <div 
+                    key={i} 
+                    className={`text-center p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 ${
+                      info.action !== 'none' ? 'cursor-pointer transform hover:scale-105' : ''
+                    }`}
+                    onClick={() => info.action !== 'none' && handleQuickAction(info.action)}
+                  >
                     <Icon className={`w-12 h-12 ${info.color} mx-auto mb-6`} />
                     <h3 className="text-xl font-bold text-white mb-4">{info.title}</h3>
                     {info.details.map((detail, j) => (
                       <p key={j} className="text-gray-300 mb-1">{detail}</p>
                     ))}
+                    {info.action !== 'none' && (
+                      <div className="mt-4">
+                        <span className="inline-flex items-center gap-1 text-sm text-pink-400 font-medium">
+                          Click to {info.action === 'call' ? 'request call' : info.action === 'whatsapp' ? 'WhatsApp' : 'email'}
+                          <Zap className="w-3 h-3" />
+                        </span>
+                      </div>
+                    )}
                   </div>
                 )
               })}
@@ -184,7 +293,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="input-field"
-                        placeholder="+971 50 123 4567"
+                        placeholder="+971 56 566 3377"
                       />
                     </div>
                     <div>
@@ -324,6 +433,54 @@ export default function ContactPage() {
                   <p className="text-sm text-gray-400">
                     Limited time offer • No strings attached
                   </p>
+                </div>
+
+                {/* WhatsApp CTA in sidebar */}
+                <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20">
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <MessageCircle className="w-6 h-6 text-green-400" />
+                    Need Immediate Help?
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    Get instant answers to your questions via WhatsApp. Our team is standing by to help you.
+                  </p>
+                  <button
+                    onClick={handleWhatsAppClick}
+                    className="w-full py-3 px-6 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    Start WhatsApp Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Emergency Contact Section */}
+        <section className="py-12 px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="p-8 rounded-3xl bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20">
+              <div className="text-center">
+                <h2 className="text-2xl font-black text-white mb-4">🚨 Emergency Support</h2>
+                <p className="text-gray-300 mb-6">
+                  Business emergency? Technical issues? We're here 24/7 to help when you need it most.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={handleCallClick}
+                    className="flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all duration-300 hover:scale-105"
+                  >
+                    <Phone className="w-5 h-5" />
+                    Request Emergency Call
+                  </button>
+                  <button
+                    onClick={handleWhatsAppClick}
+                    className="flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold transition-all duration-300 hover:scale-105"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    24/7 WhatsApp Support
+                  </button>
                 </div>
               </div>
             </div>

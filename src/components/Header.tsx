@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navigation = [
@@ -36,6 +36,16 @@ export function Header() {
       document.body.style.overflow = 'unset'
     }
   }, [isOpen])
+
+  const handleCallClick = () => {
+    const message = encodeURIComponent('Hello! I would like to schedule a call to discuss your digital marketing services. When would be a good time?')
+    window.open(`https://wa.me/971565663377?text=${message}`, '_blank')
+  }
+
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent('Hello! I would like to learn more about your digital marketing services.')
+    window.open(`https://wa.me/971565663377?text=${message}`, '_blank')
+  }
 
   return (
     <>
@@ -71,8 +81,29 @@ export function Header() {
               ))}
             </div>
 
-            {/* Desktop CTA Button */}
-            <div className="hidden lg:flex items-center">
+            {/* Desktop Action Buttons */}
+            <div className="hidden lg:flex items-center gap-3">
+              {/* Call Button */}
+              <button
+                onClick={handleCallClick}
+                className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105"
+                title="WhatsApp Call"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="hidden xl:inline">Call</span>
+              </button>
+
+              {/* WhatsApp Button */}
+              <button
+                onClick={handleWhatsAppClick}
+                className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105"
+                title="WhatsApp"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span className="hidden xl:inline">WhatsApp</span>
+              </button>
+
+              {/* Main CTA */}
               <Link
                 href="/contact"
                 className="btn-primary flex items-center gap-2"
@@ -150,8 +181,33 @@ export function Header() {
               ))}
             </nav>
             
-            {/* Mobile CTA Button */}
-            <div className="mt-12">
+            {/* Mobile Action Buttons */}
+            <div className="mt-12 space-y-4">
+              {/* Call Button */}
+              <button
+                onClick={() => {
+                  handleCallClick()
+                  setIsOpen(false)
+                }}
+                className="flex items-center gap-3 w-full py-3 px-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold text-lg transition-all duration-300"
+              >
+                <Phone className="w-5 h-5" />
+                Request Call via WhatsApp
+              </button>
+
+              {/* WhatsApp Button */}
+              <button
+                onClick={() => {
+                  handleWhatsAppClick()
+                  setIsOpen(false)
+                }}
+                className="flex items-center gap-3 w-full py-3 px-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-lg transition-all duration-300"
+              >
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp Message
+              </button>
+
+              {/* Main CTA */}
               <Link
                 href="/contact"
                 className="block w-full text-center py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-pink-500/30"
