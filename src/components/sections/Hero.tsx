@@ -65,7 +65,7 @@ export function Hero() {
       {/* Main Content */}
       <div 
         ref={heroRef}
-        className="relative z-10 flex flex-col items-center justify-center text-center px-6 flex-1"
+        className="relative z-10 flex flex-col items-center justify-center text-center px-6 flex-1 pt-24 min-h-0"
         style={{
           transform: `translateY(${scrollY * 0.3}px)`,
         }}
@@ -73,17 +73,17 @@ export function Hero() {
         <div className={`transform transition-all duration-1500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           
           {/* Badge */}
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-300">
+          <div className="mb-6 sm:mb-8">
+            <div className="inline-flex items-center px-3 py-2 sm:px-4 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-xs sm:text-sm text-gray-300">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
               🚀 Now serving Dubai & MENA region
             </div>
           </div>
 
           {/* 3D Title with depth */}
-          <div className="relative mb-8">
+          <div className="relative mb-6 sm:mb-8">
             <h1 
-              className="text-6xl md:text-8xl font-black leading-tight relative z-10"
+              className="text-4xl sm:text-6xl md:text-8xl font-black leading-tight relative z-10"
               style={{
                 transform: `perspective(1000px) rotateX(${mousePosition.y * 0.1}deg) rotateY(${mousePosition.x * 0.1}deg)`,
                 transformStyle: 'preserve-3d'
@@ -99,7 +99,7 @@ export function Hero() {
                 DIGITAL
               </span>
               <span 
-                className="block text-white mt-2"
+                className="block text-white mt-1 sm:mt-2"
                 style={{
                   transform: 'translateZ(60px)',
                   textShadow: '0 20px 40px rgba(0, 0, 0, 0.5)'
@@ -111,14 +111,14 @@ export function Hero() {
             
             {/* 3D shadow layer */}
             <h1 
-              className="absolute inset-0 text-6xl md:text-8xl font-black leading-tight opacity-20 blur-sm"
+              className="absolute inset-0 text-4xl sm:text-6xl md:text-8xl font-black leading-tight opacity-20 blur-sm"
               style={{
                 transform: `perspective(1000px) rotateX(${mousePosition.y * 0.1}deg) rotateY(${mousePosition.x * 0.1}deg) translateZ(-50px)`,
                 color: '#333'
               }}
             >
               <span className="block">DIGITAL</span>
-              <span className="block mt-2">REVOLUTION</span>
+              <span className="block mt-1 sm:mt-2">REVOLUTION</span>
             </h1>
           </div>
           
@@ -126,23 +126,23 @@ export function Hero() {
             className="relative z-10 max-w-4xl mx-auto"
             style={{transform: `translateZ(20px)`}}
           >
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
               🚀 The agency revolutionizing digital marketing in the <span className="text-yellow-400 font-bold">Middle East</span>
               <br />
               AI Analytics + Automation + <span className="text-pink-400 font-bold">GUARANTEED ROI</span>!
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12">
               <Link
                 href="/contact"
-                className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl text-white font-bold text-lg transform hover:scale-105 transition-all duration-500 shadow-2xl hover:shadow-pink-500/30"
+                className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl text-white font-bold text-base sm:text-lg transform hover:scale-105 transition-all duration-500 shadow-2xl hover:shadow-pink-500/30 w-full sm:w-auto"
                 style={{
                   transform: `perspective(1000px) rotateX(${mousePosition.y * 0.05}deg) rotateY(${mousePosition.x * 0.05}deg)`,
                   boxShadow: '0 20px 40px rgba(236, 72, 153, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
                 }}
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                   Get Free Consultation
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -150,21 +150,21 @@ export function Hero() {
               
               <Link
                 href="/demo"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-2xl font-bold text-lg hover:bg-white/20 transition-all duration-500 transform hover:scale-105"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-2xl font-bold text-base sm:text-lg hover:bg-white/20 transition-all duration-500 transform hover:scale-105 w-full sm:w-auto"
                 style={{
                   transform: `perspective(1000px) rotateX(${mousePosition.y * 0.05}deg) rotateY(${mousePosition.x * 0.05}deg)`,
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                 }}
               >
-                <span className="flex items-center gap-2">
-                  <Play className="w-5 h-5" />
+                <span className="flex items-center justify-center gap-2">
+                  <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                   Watch Our Work
                 </span>
               </Link>
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-400">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
                 Free consultation
