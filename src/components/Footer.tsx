@@ -55,6 +55,7 @@ export function Footer(): JSX.Element {
           <div className="text-gray-400">
             <p className="mb-2">🌟 Made with ❤️ in Dubai</p>
             <p>© 2025 BRANDSTORM - All rights reserved</p>
+            <p className="text-xs mt-2 opacity-70">Powered by ITI SERVICES</p>
           </div>
           
           <div className="flex space-x-6 mt-4 md:mt-0">
