@@ -71,25 +71,25 @@ const addOns = [
   {
     name: "Website Development",
     description: "Custom website from scratch",
-    price: "2,999",
+    price: "11,000",
     period: "one-time"
   },
   {
     name: "E-commerce Store",
     description: "Full online store setup",
-    price: "4,999",
+    price: "18,350",
     period: "one-time"
   },
   {
     name: "Brand Identity",
     description: "Logo, colors, brand guidelines",
-    price: "1,499",
+    price: "5,500",
     period: "one-time"
   },
   {
     name: "Video Production",
     description: "Professional video content",
-    price: "999",
+    price: "3,670",
     period: "per video"
   }
 ]
@@ -172,7 +172,7 @@ export default function PricingPage() {
                   <h3 className="text-xl font-bold text-white mb-3">{addon.name}</h3>
                   <p className="text-gray-400 mb-4 text-sm">{addon.description}</p>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-black text-white">${addon.price}</span>
+                    <span className="text-2xl font-black text-white">{addon.price} AED</span>
                     <span className="text-gray-400 text-sm">{addon.period}</span>
                   </div>
                 </div>
