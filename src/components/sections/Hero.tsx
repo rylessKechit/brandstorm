@@ -32,7 +32,7 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex flex-col justify-center overflow-hidden">
       {/* Subtle animated background */}
       <div className="absolute inset-0">
         <div 
@@ -65,7 +65,7 @@ export function Hero() {
       {/* Main Content */}
       <div 
         ref={heroRef}
-        className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-20"
+        className="relative z-10 flex flex-col items-center justify-center text-center px-6 flex-1"
         style={{
           transform: `translateY(${scrollY * 0.3}px)`,
         }}
@@ -180,10 +180,12 @@ export function Hero() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* 3D scroll indicator */}
+      {/* 3D scroll indicator - Repositionné tout en bas */}
+      <div className="relative z-10 pb-8 flex justify-center">
         <div 
-          className={`absolute bottom-10 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+          className={`transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
           style={{
             transform: `translateY(${Math.sin(Date.now() * 0.002) * 10}px)`,
             animation: 'float 3s ease-in-out infinite'
