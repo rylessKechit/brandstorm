@@ -168,7 +168,7 @@ export default function TermsPage() {
               {/* Limitation of Liability */}
               <div className="mb-16">
                 <div className="flex items-center gap-4 mb-6">
-                  <AlertTriangle className="w-8 h-8 text-orange-400" />
+                  <AlertTriangle className="w-8 h-8 text-cyan-400" />
                   <h2 className="text-3xl font-black text-white">Limitation of Liability</h2>
                 </div>
                 

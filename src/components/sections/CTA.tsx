@@ -78,7 +78,7 @@ export function CTA() {
           {/* Trust Indicators */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12 text-sm text-gray-400">
             <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-yellow-400" />
+              <Zap className="w-4 h-4 text-cyan-400" />
               Setup in 48 hours
             </div>
             <div className="flex items-center gap-2">

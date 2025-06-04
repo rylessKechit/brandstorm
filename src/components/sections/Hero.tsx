@@ -127,7 +127,7 @@ export function Hero() {
             style={{transform: `translateZ(20px)`}}
           >
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-              🚀 The agency revolutionizing digital marketing in the <span className="text-yellow-400 font-bold">Middle East</span>
+              🚀 The agency revolutionizing digital marketing in the <span className="text-cyan-400 font-bold">Middle East</span>
               <br />
               AI Analytics + Automation + <span className="text-pink-400 font-bold">GUARANTEED ROI</span>!
             </p>

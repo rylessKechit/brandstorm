@@ -44,7 +44,7 @@ export default function CookiesPage() {
               {/* What Are Cookies */}
               <div className="mb-16">
                 <div className="flex items-center gap-4 mb-6">
-                  <Cookie className="w-8 h-8 text-orange-400" />
+                  <Cookie className="w-8 h-8 text-cyan-400" />
                   <h2 className="text-3xl font-black text-white">What Are Cookies?</h2>
                 </div>
                 

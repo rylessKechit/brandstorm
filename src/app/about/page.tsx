@@ -139,7 +139,7 @@ export default function AboutPage() {
                     <div className="text-gray-300">Specialists</div>
                   </div>
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-white/10">
-                    <Target className="w-8 h-8 text-orange-400 mb-4" />
+                    <Target className="w-8 h-8 text-cyan-400 mb-4" />
                     <div className="text-3xl font-black text-white mb-2">90-Day</div>
                     <div className="text-gray-300">ROI Guarantee</div>
                   </div>

@@ -29,7 +29,7 @@ const services = [
       '50% faster loading speeds',
       '95+ PageSpeed scores'
     ],
-    startingPrice: '$2,999',
+    startingPrice: '11,000 AED',
     color: 'from-blue-500 to-purple-600'
   },
   {
@@ -51,7 +51,7 @@ const services = [
       '10x follower growth',
       '200% boost in reach'
     ],
-    startingPrice: '$1,499',
+    startingPrice: '5,500 AED',
     color: 'from-pink-500 to-rose-600'
   },
   {
@@ -73,7 +73,7 @@ const services = [
       '80% reduction in manual work',
       '250% boost in sales efficiency'
     ],
-    startingPrice: '$1,999',
+    startingPrice: '7,350 AED',
     color: 'from-purple-500 to-indigo-600'
   },
   {
@@ -95,7 +95,7 @@ const services = [
       '150% more qualified leads',
       'Page 1 rankings guaranteed'
     ],
-    startingPrice: '$1,299',
+    startingPrice: '4,770 AED',
     color: 'from-green-500 to-teal-600'
   },
   {
@@ -117,7 +117,7 @@ const services = [
       '70% lower cost per acquisition',
       '300% increase in conversions'
     ],
-    startingPrice: '$999',
+    startingPrice: '3,670 AED',
     color: 'from-yellow-500 to-orange-600'
   },
   {
@@ -139,7 +139,7 @@ const services = [
       '50% better decision making',
       '200% improvement in targeting'
     ],
-    startingPrice: '$799',
+    startingPrice: '2,930 AED',
     color: 'from-cyan-500 to-blue-600'
   }
 ]
@@ -259,7 +259,7 @@ export default function ServicesPage() {
                         <ul className="space-y-2">
                           {service.results.map((result, j) => (
                             <li key={j} className="text-gray-300 flex items-center gap-2 text-sm">
-                              <TrendingUp className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                              <TrendingUp className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               {result}
                             </li>
                           ))}
@@ -271,6 +271,7 @@ export default function ServicesPage() {
                       <div>
                         <div className="text-gray-400 text-sm">Starting at</div>
                         <div className="text-2xl font-black text-white">{service.startingPrice}</div>
+                        <div className="text-gray-500 text-xs">per month</div>
                       </div>
                       
                       <Link
@@ -329,7 +330,7 @@ export default function ServicesPage() {
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <Star className="w-12 h-12 text-yellow-400 mx-auto mb-6" />
+                <Star className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Proven Results</h3>
                 <p className="text-gray-300">500+ successful campaigns with an average 300% ROI increase for our clients.</p>
               </div>
