@@ -76,7 +76,7 @@ export function Pricing() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your business growth. All plans include setup, strategy, and ongoing optimization.
+            Choose the perfect plan for your business growth. All plans include setup, strategy, and ongoing optimization. Prices in AED.
           </p>
           
           {/* Billing Toggle */}
@@ -122,15 +122,18 @@ export function Pricing() {
                   <p className="text-gray-400 mb-8">{plan.description}</p>
                   
                   <div className="mb-8">
-                    <div className="flex items-baseline gap-2">
+                    <div className="flex items-baseline justify-center gap-2">
                       <span className="text-5xl font-black text-white">
-                        ${isAnnual ? Math.round(parseInt(plan.price) * 0.8) : plan.price}
+                        {isAnnual ? Math.round(parseInt(plan.price) * 0.8 * 3.67) : Math.round(parseInt(plan.price) * 3.67)} AED
                       </span>
                       <span className="text-gray-400">/{plan.period}</span>
                     </div>
+                    <div className="text-gray-500 text-sm text-center">
+                      ${isAnnual ? Math.round(parseInt(plan.price) * 0.8) : plan.price} USD
+                    </div>
                     {isAnnual && (
                       <div className="text-green-400 text-sm mt-2">
-                        Save ${Math.round(parseInt(plan.price) * 0.2 * 12)} annually
+                        Save {Math.round(parseInt(plan.price) * 0.2 * 12 * 3.67)} AED annually
                       </div>
                     )}
                   </div>
