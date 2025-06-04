@@ -15,7 +15,7 @@ export function Footer(): JSX.Element {
   }
 
   const handleEmailClick = () => {
-    window.open('mailto:hello@brandstorm.com?subject=Inquiry&body=Hello, I would like to learn more about your services.', '_self')
+    window.open('mailto:hello@vizionaire.com?subject=Inquiry&body=Hello, I would like to learn more about your services.', '_self')
   }
 
   return (
@@ -25,7 +25,7 @@ export function Footer(): JSX.Element {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="text-2xl font-black text-gradient">
-              BRANDSTORM
+              VIZIONAIRE
             </Link>
             <p className="text-gray-400 mt-2 mb-6">
               Revolutionizing digital marketing in the Middle East
@@ -54,7 +54,7 @@ export function Footer(): JSX.Element {
                 className="flex items-center gap-3 w-full sm:w-auto px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105"
               >
                 <Mail className="w-4 h-4" />
-                hello@brandstorm.com
+                hello@vizionaire.com
               </button>
             </div>
           </div>
@@ -106,7 +106,7 @@ export function Footer(): JSX.Element {
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10">
           <div className="text-gray-400 text-center md:text-left">
             <p className="mb-2">🌟 Made with ❤️ in Dubai</p>
-            <p>© 2025 BRANDSTORM - All rights reserved</p>
+            <p>© 2025 VIZIONAIRE - All rights reserved</p>
             <p className="text-xs mt-2 opacity-70">Powered by ITI SERVICES</p>
           </div>
           

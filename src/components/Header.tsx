@@ -64,7 +64,7 @@ export function Header() {
               href="/" 
               className="text-2xl lg:text-3xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 relative z-60"
             >
-              BRANDSTORM
+              VIZIONAIRE
             </Link>
 
             {/* Desktop Navigation */}
@@ -153,7 +153,7 @@ export function Header() {
               className="text-2xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent"
               onClick={() => setIsOpen(false)}
             >
-              BRANDSTORM
+              VIZIONAIRE
             </Link>
             
             <button

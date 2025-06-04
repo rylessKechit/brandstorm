@@ -75,8 +75,8 @@ export async function POST(request: NextRequest) {
     // Simulate email sending (replace with actual email service)
     // In production, use services like Resend, SendGrid, or AWS SES
     const emailData = {
-      to: 'hello@brandstorm.com',
-      from: 'noreply@brandstorm.com',
+      to: 'hello@vizionaire.com',
+      from: 'noreply@vizionaire.com',
       subject: `New Contact Form Submission from ${validatedData.name}`,
       html: generateEmailTemplate(validatedData),
       replyTo: validatedData.email
@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
     // Send confirmation email to user
     const confirmationEmail = {
       to: validatedData.email,
-      from: 'hello@brandstorm.com',
+      from: 'hello@vizionaire.com',
       subject: 'Thank you for contacting BrandStorm!',
       html: generateConfirmationTemplate(validatedData.name)
     }
@@ -242,7 +242,7 @@ function generateConfirmationTemplate(name: string): string {
     <body>
       <div class="container">
         <div class="header">
-          <h1>🚀 BRANDSTORM</h1>
+          <h1>🚀 VIZIONAIRE</h1>
           <h2>Thank You, ${name}!</h2>
           <p>We've received your message and we're excited to help transform your business.</p>
         </div>
@@ -272,12 +272,12 @@ function generateConfirmationTemplate(name: string): string {
           </div>
           
           <div style="text-align: center;">
-            <a href="https://brandstorm.com/about" class="cta">Learn More About Us</a>
+            <a href="https://vizionaire.com/about" class="cta">Learn More About Us</a>
           </div>
           
           <p>In the meantime, feel free to:</p>
           <ul>
-            <li>Check out our <a href="https://brandstorm.com/demo" style="color: #ec4899;">success stories</a></li>
+            <li>Check out our <a href="https://vizionaire.com/demo" style="color: #ec4899;">success stories</a></li>
             <li>Follow us on social media for daily tips</li>
             <li>Call us directly at <a href="tel:+97141234567" style="color: #ec4899;">+971 4 123 4567</a></li>
           </ul>
@@ -291,7 +291,7 @@ function generateConfirmationTemplate(name: string): string {
         
         <div class="footer">
           <p><strong>BrandStorm Digital Marketing</strong></p>
-          <p>DIFC, Dubai, UAE | hello@brandstorm.com | +971 4 123 4567</p>
+          <p>DIFC, Dubai, UAE | hello@vizionaire.com | +971 4 123 4567</p>
           <p>Revolutionizing digital marketing in the Middle East 🇦🇪</p>
         </div>
       </div>

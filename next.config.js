@@ -5,7 +5,7 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     domains: [
       'localhost',
-      'brandstorm.com',
+      'vizionaire.com',
       'images.unsplash.com',
       'avatars.githubusercontent.com',
       'lh3.googleusercontent.com',

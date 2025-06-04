@@ -327,7 +327,7 @@ export default function TermsPage() {
                   <p className="mb-4">For questions about these terms of service, contact us:</p>
                   <div className="p-6 rounded-xl bg-white/5 border border-white/10">
                     <div className="space-y-2">
-                      <p><strong>Legal Department:</strong> legal@brandstorm.com</p>
+                      <p><strong>Legal Department:</strong> legal@vizionaire.com</p>
                       <p><strong>Phone:</strong> +971 4 123 4567</p>
                       <p><strong>Address:</strong> DIFC, Dubai, UAE</p>
                       <p><strong>Business Hours:</strong> Sunday - Thursday, 9AM - 6PM GST</p>

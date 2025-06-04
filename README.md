@@ -54,7 +54,7 @@ A premium SaaS platform revolutionizing digital marketing in the Middle East. Bu
 ## 📁 Project Structure
 
 ```
-brandstorm-saas/
+vizionaire-saas/
 ├── 📁 public/
 │   ├── images/
 │   ├── icons/
@@ -139,8 +139,8 @@ brandstorm-saas/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/brandstorm-saas.git
-cd brandstorm-saas
+git clone https://github.com/your-username/vizionaire-saas.git
+cd vizionaire-saas
 ```
 
 2. **Install dependencies**
@@ -200,7 +200,7 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 NEXT_PUBLIC_APP_NAME="BrandStorm"
 
 # Database
-DATABASE_URL="postgresql://username:password@localhost:5432/brandstorm"
+DATABASE_URL="postgresql://username:password@localhost:5432/vizionaire"
 
 # Authentication
 NEXTAUTH_URL=http://localhost:3000
@@ -339,9 +339,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Email**: support@brandstorm.com
-- **Discord**: [Join our community](https://discord.gg/brandstorm)
-- **Documentation**: [docs.brandstorm.com](https://docs.brandstorm.com)
+- **Email**: support@vizionaire.com
+- **Discord**: [Join our community](https://discord.gg/vizionaire)
+- **Documentation**: [docs.vizionaire.com](https://docs.vizionaire.com)
 
 ## 🗺 Roadmap
 

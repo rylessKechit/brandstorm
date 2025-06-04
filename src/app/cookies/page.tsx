@@ -360,7 +360,7 @@ export default function CookiesPage() {
                   <p className="mb-4">If you have any questions about our use of cookies, please contact us:</p>
                   <div className="p-6 rounded-xl bg-white/5 border border-white/10">
                     <div className="space-y-2">
-                      <p><strong>Email:</strong> privacy@brandstorm.com</p>
+                      <p><strong>Email:</strong> privacy@vizionaire.com</p>
                       <p><strong>Phone:</strong> +971 4 123 4567</p>
                       <p><strong>Address:</strong> DIFC, Dubai, UAE</p>
                       <p><strong>Response Time:</strong> Within 2 business days</p>

@@ -160,7 +160,7 @@ export default function PrivacyPage() {
                     <li><strong>Portability:</strong> Request transfer of your data</li>
                     <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
                   </ul>
-                  <p className="mt-4">To exercise these rights, contact us at privacy@brandstorm.com</p>
+                  <p className="mt-4">To exercise these rights, contact us at privacy@vizionaire.com</p>
                 </div>
               </div>
 
@@ -222,7 +222,7 @@ export default function PrivacyPage() {
                   <p className="mb-4">If you have questions about this privacy policy or our data practices, contact us:</p>
                   <div className="p-6 rounded-xl bg-white/5 border border-white/10">
                     <div className="space-y-2">
-                      <p><strong>Email:</strong> privacy@brandstorm.com</p>
+                      <p><strong>Email:</strong> privacy@vizionaire.com</p>
                       <p><strong>Phone:</strong> +971 4 123 4567</p>
                       <p><strong>Address:</strong> DIFC, Dubai, UAE</p>
                       <p><strong>Response Time:</strong> Within 30 days</p>

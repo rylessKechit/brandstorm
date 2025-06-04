@@ -23,7 +23,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["hello@brandstorm.com", "support@brandstorm.com"],
+    details: ["hello@vizionaire.com", "support@vizionaire.com"],
     color: "text-blue-400",
     action: "email"
   },
@@ -113,7 +113,7 @@ export default function ContactPage() {
   }
 
   const handleEmailClick = () => {
-    window.open('mailto:hello@brandstorm.com?subject=Free consultation request&body=Hello, I would like to schedule a free consultation to discuss my digital marketing needs.', '_self')
+    window.open('mailto:hello@vizionaire.com?subject=Free consultation request&body=Hello, I would like to schedule a free consultation to discuss my digital marketing needs.', '_self')
   }
 
   const handleQuickAction = (action: string) => {
