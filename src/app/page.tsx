@@ -7,6 +7,8 @@ import { TestimonialsMini } from '@/components/sections/TestimonialsMini'
 import { CTA } from '@/components/sections/CTA'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { Video } from 'lucide-react'
+import { VideoHero } from '@/components/sections/VideoHero'
 
 export default function HomePage() {
   return (
@@ -20,7 +22,7 @@ export default function HomePage() {
       {/* Main Content */}
       <main>
         {/* Hero Section */}
-        <Hero />
+        <VideoHero />
         
         {/* Features Section */}
         <Features />
