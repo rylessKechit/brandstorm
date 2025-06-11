@@ -22,7 +22,7 @@ export default function HomePage() {
       {/* Main Content */}
       <main>
         {/* Hero Section */}
-        <VideoHero />
+        <Hero />
         
         {/* Features Section */}
         <Features />
