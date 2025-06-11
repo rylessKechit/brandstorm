@@ -63,7 +63,7 @@ export function Header() {
               href="/" 
               className="flex items-center gap-3 hover:scale-105 transition-transform duration-300 relative z-60"
             >
-              <div className="w-12 h-12 lg:w-14 lg:h-14 relative">
+              <div className="w-14 h-14 lg:w-16 lg:h-16 relative">
                 {/* Remplacez 'logo-placeholder.png' par le chemin vers votre logo */}
                 <img 
                   src="/logo.png" 
