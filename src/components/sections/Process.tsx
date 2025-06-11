@@ -1,4 +1,4 @@
-// src/components/sections/Process.tsx
+// PROCESS COMPONENT - Updated UAE Colors
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -10,28 +10,28 @@ const processSteps = [
     title: "Discovery & Strategy",
     description: "We analyze your business, competitors, and target audience to create a winning strategy",
     features: ["Market Research", "Competitor Analysis", "Goal Setting", "Strategy Blueprint"],
-    color: "from-blue-500 to-cyan-500"
+    color: "from-red-600 to-red-500"
   },
   {
     step: "02", 
     title: "Setup & Implementation",
     description: "We set up all your marketing systems, campaigns, and automation workflows",
     features: ["Platform Setup", "Campaign Creation", "Automation Build", "Integration"],
-    color: "from-purple-500 to-pink-500"
+    color: "from-green-600 to-green-500"
   },
   {
     step: "03",
     title: "Launch & Optimize",
     description: "We launch your campaigns and continuously optimize for maximum ROI",
     features: ["Campaign Launch", "Performance Monitoring", "A/B Testing", "ROI Optimization"],
-    color: "from-green-500 to-teal-500"
+    color: "from-amber-600 to-amber-500"
   },
   {
     step: "04",
     title: "Scale & Grow",
     description: "We scale successful campaigns and expand to new channels for explosive growth",
     features: ["Campaign Scaling", "New Channel Expansion", "Advanced Automation", "Growth Acceleration"],
-    color: "from-orange-500 to-red-500"
+    color: "from-red-600 to-green-600"
   }
 ]
 
@@ -47,7 +47,7 @@ export function Process() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-8">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
               Our Proven Process
             </span>
           </h2>
@@ -79,7 +79,7 @@ export function Process() {
                   <ul className="space-y-2">
                     {step.features.map((feature, j) => (
                       <li key={j} className="flex items-center gap-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        <CheckCircle className="w-4 h-4 text-green-500" />
                         {feature}
                       </li>
                     ))}
@@ -90,7 +90,7 @@ export function Process() {
               {/* Arrow connector */}
               {i < processSteps.length - 1 && (
                 <div className="hidden xl:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
-                  <ArrowRight className="w-8 h-8 text-pink-400" />
+                  <ArrowRight className="w-8 h-8 text-red-500" />
                 </div>
               )}
             </div>

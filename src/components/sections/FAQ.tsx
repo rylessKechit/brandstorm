@@ -1,4 +1,4 @@
-// src/components/sections/FAQ.tsx
+// FAQ COMPONENT - Updated UAE Colors
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -52,7 +52,7 @@ export function FAQ() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-8">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
               Frequently Asked Questions
             </span>
           </h2>
@@ -77,9 +77,9 @@ export function FAQ() {
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-bold text-white pr-4">{faq.question}</h3>
                   {openIndex === i ? (
-                    <ChevronUp className="w-5 h-5 text-pink-400 flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-red-500 flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-pink-400 flex-shrink-0" />
+                    <ChevronDown className="w-5 h-5 text-red-500 flex-shrink-0" />
                   )}
                 </div>
                 
@@ -97,7 +97,7 @@ export function FAQ() {
           <p className="text-gray-400 mb-4">Still have questions?</p>
           <a 
             href="/contact"
-            className="text-pink-400 hover:text-pink-300 font-bold transition-colors duration-300"
+            className="text-red-500 hover:text-red-400 font-bold transition-colors duration-300"
           >
             Contact our team for personalized answers →
           </a>

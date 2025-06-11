@@ -1,4 +1,4 @@
-// src/components/sections/Testimonials.tsx
+// TESTIMONIALS COMPONENT - Updated UAE Colors
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -61,7 +61,7 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-8">
-            <span className="bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
               What Our Clients Say
             </span>
           </h2>
@@ -79,18 +79,18 @@ export function Testimonials() {
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-purple-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 to-green-600/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
-                <Quote className="w-8 h-8 text-pink-400 mb-4" />
+                <Quote className="w-8 h-8 text-red-500 mb-6" />
                 
-                <div className="flex items-center gap-1 mb-4">
+                <div className="flex items-center gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 text-cyan-400 fill-current" />
+                    <Star key={j} className="w-5 h-5 text-amber-500 fill-current" />
                   ))}
                 </div>
                 
-                <p className="text-gray-300 mb-6 leading-relaxed">"{testimonial.text}"</p>
+                <p className="text-gray-300 mb-8 leading-relaxed font-light">"{testimonial.text}"</p>
                 
                 <div className="flex items-center gap-4">
                   <div className="text-3xl">{testimonial.avatar}</div>
