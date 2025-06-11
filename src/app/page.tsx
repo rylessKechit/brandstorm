@@ -7,39 +7,34 @@ import { TestimonialsMini } from '@/components/sections/TestimonialsMini'
 import { CTA } from '@/components/sections/CTA'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { Video } from 'lucide-react'
-import { VideoHero } from '@/components/sections/VideoHero'
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-black overflow-hidden relative">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-pink-900/5 to-cyan-900/10" />
-      
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <Header />
       
       {/* Main Content */}
       <main>
-        {/* Hero Section */}
+        {/* Hero Section - Fond blanc */}
         <Hero />
         
-        {/* Features Section */}
+        {/* Features Section - Fond gris clair */}
         <Features />
         
-        {/* Services Section (Condensed) */}
+        {/* Services Section - Fond blanc */}
         <Services />
         
-        {/* Stats Section */}
+        {/* Stats Section - Fond rouge/or Dubai */}
         <Stats />
         
-        {/* Mini Testimonials (Optional) */}
+        {/* Testimonials Section - Fond blanc */}
         <TestimonialsMini />
         
-        {/* Pricing Section */}
+        {/* Pricing Section - Fond gris clair */}
         <Pricing />
         
-        {/* Final CTA */}
+        {/* Final CTA - Fond sombre */}
         <CTA />
       </main>
       

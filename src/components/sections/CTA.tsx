@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Rocket, ArrowRight, Phone } from 'lucide-react'
+import { Rocket, ArrowRight, Phone, CheckCircle, Star } from 'lucide-react'
 
 export function CTA() {
   const [isVisible, setIsVisible] = useState(false)
@@ -11,81 +11,120 @@ export function CTA() {
     setIsVisible(true)
   }, [])
 
+  const handleCallClick = () => {
+    const message = encodeURIComponent('Bonjour ! Je suis prêt à transformer mon business avec VIZIONAIRE. Pouvons-nous planifier une consultation ?')
+    window.open(`https://wa.me/971565663377?text=${message}`, '_blank')
+  }
+
   return (
-    <section className="relative py-24 px-6 overflow-hidden bg-black">
-      {/* Clean Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 via-black to-green-900/10" />
-        
-        {/* Subtle geometric shapes */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-[0.02] bg-gradient-to-br from-red-600 to-transparent" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-[0.02] bg-gradient-to-br from-green-600 to-transparent" />
+    <section className="relative py-20 lg:py-32 overflow-hidden">
+      {/* Dark gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
+      
+      {/* Pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" 
+             style={{
+               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm30 0c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+             }}>
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           
           {/* Icon */}
           <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-red-600 to-green-600 mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-red-600 to-amber-500 mb-6 shadow-2xl">
               <Rocket className="w-10 h-10 text-white" />
             </div>
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-6xl font-black mb-6">
-            <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
-              Ready to Dominate
-            </span>
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6 font-serif">
+            <span className="text-white">Prêt à </span>
+            <span className="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">Dominer</span>
             <br />
-            <span className="text-white">Your Market?</span>
+            <span className="text-white">Votre Marché ?</span>
           </h2>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto font-light">
-            Join 500+ businesses already crushing their competition with our proven digital marketing strategies
+          <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
+            Rejoignez <span className="font-bold text-amber-400">500+ entreprises</span> qui écrasent déjà leur concurrence 
+            avec nos stratégies de marketing digital <span className="font-bold text-red-400">éprouvées</span>
           </p>
 
           {/* Trust Indicators */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12 text-sm text-gray-400">
             <div className="flex items-center gap-2">
-              <span className="text-green-500">⚡</span>
-              Setup in 48 hours
+              <CheckCircle className="w-5 h-5 text-green-500" />
+              <span className="text-gray-300">Setup en 48 heures</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-green-500">✓</span>
-              ROI Guaranteed
+              <CheckCircle className="w-5 h-5 text-green-500" />
+              <span className="text-gray-300">ROI Garanti</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-amber-500">🏆</span>
-              #1 Rated in MENA
+              <Star className="w-5 h-5 text-amber-500" />
+              <span className="text-gray-300">#1 Classé MENA</span>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-            <Link
-              href="/contact"
-              className="group px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 rounded-2xl text-white font-bold text-lg transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-red-500/30 w-full sm:w-auto"
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+            <button
+              onClick={handleCallClick}
+              className="px-8 py-4 bg-gradient-to-r from-red-600 to-amber-500 rounded-xl text-white font-bold text-lg transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-red-500/25 flex items-center gap-3"
             >
-              <span className="flex items-center justify-center gap-2">
-                <Phone className="w-5 h-5" />
-                Start Your Transformation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
-            </Link>
+              <Phone className="w-5 h-5" />
+              Démarrer Votre Transformation
+              <ArrowRight className="w-5 h-5" />
+            </button>
             
             <Link
               href="/demo"
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-2xl font-bold text-lg hover:bg-white/20 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl font-bold text-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-105"
             >
-              View Case Studies 🎯
+              Voir Nos Études de Cas 🎯
             </Link>
           </div>
 
+          {/* Bottom Features */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/10">
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-red-500 mb-2">48h</div>
+                <div className="text-gray-300 font-medium">Setup Ultra-Rapide</div>
+                <div className="text-gray-500 text-sm mt-1">Démarrage immédiat garanti</div>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-amber-500 mb-2">90J</div>
+                <div className="text-gray-300 font-medium">Garantie ROI</div>
+                <div className="text-gray-500 text-sm mt-1">Résultats ou remboursé</div>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-500 mb-2">24/7</div>
+                <div className="text-gray-300 font-medium">Support Expert</div>
+                <div className="text-gray-500 text-sm mt-1">Assistance permanente</div>
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-8 border-t border-white/10 text-center">
+              <p className="text-gray-400 text-lg">
+                💡 <span className="text-white font-semibold">Consultation gratuite</span> • 
+                <span className="text-white font-semibold"> Stratégie personnalisée</span> • 
+                <span className="text-white font-semibold"> Résultats garantis</span>
+              </p>
+            </div>
+          </div>
+
           {/* Final Trust Line */}
-          <p className="text-gray-500 text-sm">
-            💡 Free consultation • Custom strategy • Results guaranteed
-          </p>
+          <div className="mt-8 text-center">
+            <p className="text-gray-500 text-sm">
+              🇦🇪 Fait avec ❤️ à Dubaï par l'équipe VIZIONAIRE
+            </p>
+          </div>
         </div>
       </div>
     </section>
