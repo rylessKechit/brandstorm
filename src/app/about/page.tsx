@@ -40,22 +40,26 @@ const values = [
   {
     icon: Target,
     title: "Results-Driven",
-    description: "Every strategy, every campaign, every decision is focused on delivering measurable ROI for our clients."
+    description: "Every strategy, every campaign, every decision is focused on delivering measurable ROI for our clients.",
+    color: "text-red-500"
   },
   {
     icon: Globe,
     title: "MENA Expertise",
-    description: "Deep understanding of Middle Eastern markets, culture, and consumer behavior."
+    description: "Deep understanding of Middle Eastern markets, culture, and consumer behavior.",
+    color: "text-green-500"
   },
   {
     icon: Zap,
     title: "Innovation First",
-    description: "We leverage cutting-edge AI and automation to stay ahead of the competition."
+    description: "We leverage cutting-edge AI and automation to stay ahead of the competition.",
+    color: "text-amber-500"
   },
   {
     icon: Users,
     title: "Partnership Approach",
-    description: "We don't just work for you - we work with you as an extension of your team."
+    description: "We don't just work for you - we work with you as an extension of your team.",
+    color: "text-red-500"
   }
 ]
 
@@ -77,12 +81,12 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="relative py-20 px-6 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/10 to-cyan-900/20" />
+            <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-amber-900/10 to-green-900/20" />
           </div>
           
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-black mb-8">
-              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                 Our Story
               </span>
             </h1>
@@ -99,7 +103,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-4xl font-black mb-8">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                     Our Mission
                   </span>
                 </h2>
@@ -114,7 +118,7 @@ export default function AboutPage() {
                 </p>
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center gap-2 btn-primary"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105"
                 >
                   Start Your Journey
                   <ArrowRight className="w-5 h-5" />
@@ -123,23 +127,23 @@ export default function AboutPage() {
               
               <div className="relative">
                 <div className="grid grid-cols-2 gap-6">
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-white/10">
-                    <TrendingUp className="w-8 h-8 text-pink-400 mb-4" />
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-red-500/10 to-red-600/10 border border-white/10">
+                    <TrendingUp className="w-8 h-8 text-red-500 mb-4" />
                     <div className="text-3xl font-black text-white mb-2">2024</div>
                     <div className="text-gray-300">Founded</div>
                   </div>
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-white/10">
-                    <Award className="w-8 h-8 text-cyan-400 mb-4" />
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-green-600/10 border border-white/10">
+                    <Award className="w-8 h-8 text-green-500 mb-4" />
                     <div className="text-3xl font-black text-white mb-2">48h</div>
                     <div className="text-gray-300">Setup Time</div>
                   </div>
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-teal-500/10 border border-white/10">
-                    <Globe className="w-8 h-8 text-green-400 mb-4" />
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-amber-500/10 to-amber-600/10 border border-white/10">
+                    <Globe className="w-8 h-8 text-amber-500 mb-4" />
                     <div className="text-3xl font-black text-white mb-2">MENA</div>
                     <div className="text-gray-300">Specialists</div>
                   </div>
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-white/10">
-                    <Target className="w-8 h-8 text-cyan-400 mb-4" />
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-red-500/10 to-green-500/10 border border-white/10">
+                    <Target className="w-8 h-8 text-red-500 mb-4" />
                     <div className="text-3xl font-black text-white mb-2">90-Day</div>
                     <div className="text-gray-300">ROI Guarantee</div>
                   </div>
@@ -154,7 +158,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Our Values
                 </span>
               </h2>
@@ -168,7 +172,7 @@ export default function AboutPage() {
                 const Icon = value.icon
                 return (
                   <div key={i} className="p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 transform hover:scale-105">
-                    <Icon className="w-12 h-12 text-pink-400 mb-6" />
+                    <Icon className={`w-12 h-12 ${value.color} mb-6`} />
                     <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
                     <p className="text-gray-300">{value.description}</p>
                   </div>
@@ -183,7 +187,7 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Meet Our Team
                 </span>
               </h2>
@@ -197,7 +201,7 @@ export default function AboutPage() {
                 <div key={i} className="text-center p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 transform hover:scale-105">
                   <div className="text-6xl mb-4">{member.avatar}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <div className="text-pink-400 font-medium mb-4">{member.role}</div>
+                  <div className="text-red-500 font-medium mb-4">{member.role}</div>
                   <p className="text-gray-300 text-sm">{member.bio}</p>
                 </div>
               ))}
@@ -210,7 +214,7 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Our Journey
                 </span>
               </h2>
@@ -222,7 +226,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {milestones.map((milestone, i) => (
                 <div key={i} className="p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500">
-                  <div className="text-3xl font-black text-pink-400 mb-2">{milestone.year}</div>
+                  <div className="text-3xl font-black text-red-500 mb-2">{milestone.year}</div>
                   <h3 className="text-xl font-bold text-white mb-4">{milestone.event}</h3>
                   <p className="text-gray-300">{milestone.description}</p>
                 </div>
@@ -235,7 +239,7 @@ export default function AboutPage() {
         <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-black mb-8">
-              <span className="bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                 Ready to Write Your Success Story?
               </span>
             </h2>
@@ -244,7 +248,7 @@ export default function AboutPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 btn-primary text-lg px-8 py-4"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-2xl transition-all duration-300 hover:scale-105 shadow-2xl"
             >
               Get Free Consultation
               <ArrowRight className="w-5 h-5" />

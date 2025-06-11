@@ -23,7 +23,7 @@ const caseStudies = [
     testimonial: "VIZIONAIRE transformed our unknown brand into a regional sensation. We went from zero to hero in less than a year!",
     client: "Layla Mohammed, Founder",
     image: "👗",
-    color: "from-pink-500 to-rose-600"
+    color: "from-red-600 to-red-500"
   },
   {
     title: "Tech Startup Dubai",
@@ -38,7 +38,7 @@ const caseStudies = [
     testimonial: "Our pipeline went from empty to overflowing. The quality of leads is exceptional and our sales team can't keep up!",
     client: "Ahmed Al-Mansouri, CEO",
     image: "💻",
-    color: "from-blue-500 to-purple-600"
+    color: "from-green-600 to-green-500"
   },
   {
     title: "Restaurant Chain",
@@ -53,7 +53,7 @@ const caseStudies = [
     testimonial: "Every location is now profitable and we're expanding to 3 more cities. VIZIONAIRE made the impossible possible!",
     client: "Khalid Bin Rashid, Owner",
     image: "🍔",
-    color: "from-orange-500 to-red-600"
+    color: "from-amber-600 to-amber-500"
   },
   {
     title: "Real Estate Agency",
@@ -68,7 +68,7 @@ const caseStudies = [
     testimonial: "We've never seen such high-quality leads. Our closing rate doubled and our marketing costs went down significantly.",
     client: "Omar Khalil, Marketing Director",
     image: "🏠",
-    color: "from-green-500 to-teal-600"
+    color: "from-red-600 to-green-600"
   }
 ]
 
@@ -120,12 +120,12 @@ export default function DemoPage() {
         {/* Hero Section */}
         <section className="relative py-20 px-6 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/10 to-cyan-900/20" />
+            <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-amber-900/10 to-green-900/20" />
           </div>
           
           <div className="relative z-10 max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-black mb-8">
-              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                 Success Stories
               </span>
               <br />
@@ -137,10 +137,10 @@ export default function DemoPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105">
                 Get Similar Results
               </Link>
-              <button className="btn-secondary text-lg px-8 py-4 flex items-center gap-2">
+              <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 font-bold rounded-xl transition-all duration-300 hover:bg-white/20 flex items-center gap-2 justify-center">
                 <Play className="w-5 h-5" />
                 Watch Video Cases
               </button>
@@ -153,7 +153,7 @@ export default function DemoPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Detailed Case Studies
                 </span>
               </h2>
@@ -198,7 +198,7 @@ export default function DemoPage() {
                               <div className="text-2xl">💬</div>
                               <div>
                                 <p className="text-gray-300 italic mb-2">"{study.testimonial}"</p>
-                                <p className="text-pink-400 font-medium">— {study.client}</p>
+                                <p className="text-red-500 font-medium">— {study.client}</p>
                               </div>
                             </div>
                           </div>
@@ -211,7 +211,7 @@ export default function DemoPage() {
                         <div className="space-y-4">
                           {study.results.map((result, j) => (
                             <div key={j} className="p-4 rounded-xl bg-white/5 border border-white/10">
-                              <div className="text-2xl font-black text-green-400 mb-1">{result.value}</div>
+                              <div className="text-2xl font-black text-green-500 mb-1">{result.value}</div>
                               <div className="text-white font-medium text-sm">{result.metric}</div>
                               <div className="text-gray-400 text-xs">{result.period}</div>
                             </div>
@@ -239,7 +239,7 @@ export default function DemoPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   More Success Stories
                 </span>
               </h2>
@@ -257,7 +257,7 @@ export default function DemoPage() {
                   <div className="text-4xl mb-4">{item.image}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                   <p className="text-gray-400 text-sm mb-4">{item.type}</p>
-                  <div className="flex items-center gap-2 text-green-400">
+                  <div className="flex items-center gap-2 text-green-500">
                     <TrendingUp className="w-4 h-4" />
                     <span className="text-sm font-medium">{item.results}</span>
                   </div>
@@ -272,7 +272,7 @@ export default function DemoPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Our Commitment
                 </span>
               </h2>
@@ -280,25 +280,25 @@ export default function DemoPage() {
             
             <div className="grid md:grid-cols-4 gap-8">
               <div className="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <Users className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+                <Users className="w-12 h-12 text-red-500 mx-auto mb-4" />
                 <div className="text-4xl font-black text-white mb-2">2024</div>
                 <div className="text-gray-300">Founded</div>
               </div>
               
               <div className="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <DollarSign className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <DollarSign className="w-12 h-12 text-green-500 mx-auto mb-4" />
                 <div className="text-4xl font-black text-white mb-2">48h</div>
                 <div className="text-gray-300">Setup Time</div>
               </div>
               
               <div className="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <TrendingUp className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <TrendingUp className="w-12 h-12 text-amber-500 mx-auto mb-4" />
                 <div className="text-4xl font-black text-white mb-2">90-Day</div>
                 <div className="text-gray-300">ROI Guarantee</div>
               </div>
               
               <div className="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <CheckCircle className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                <CheckCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
                 <div className="text-4xl font-black text-white mb-2">24/7</div>
                 <div className="text-gray-300">Support</div>
               </div>
@@ -311,7 +311,7 @@ export default function DemoPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   The Process Behind Every Success
                 </span>
               </h2>
@@ -321,32 +321,32 @@ export default function DemoPage() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-white/10">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mx-auto mb-4">
+              <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-red-500/10 to-red-600/10 border border-white/10">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-600 to-red-500 flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">1</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Deep Analysis</h3>
                 <p className="text-gray-300 text-sm">Comprehensive audit of your current situation, competitors, and market opportunities.</p>
               </div>
               
-              <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-white/10">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center mx-auto mb-4">
+              <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-green-600/10 border border-white/10">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-600 to-green-500 flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">2</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Custom Strategy</h3>
                 <p className="text-gray-300 text-sm">Tailored action plan designed specifically for your industry and target audience.</p>
               </div>
               
-              <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-teal-500/10 border border-white/10">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center mx-auto mb-4">
+              <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-amber-500/10 to-amber-600/10 border border-white/10">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">3</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Expert Execution</h3>
                 <p className="text-gray-300 text-sm">Professional implementation by our team of specialists with continuous optimization.</p>
               </div>
               
-              <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-white/10">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mx-auto mb-4">
+              <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-red-500/10 to-green-500/10 border border-white/10">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-600 to-green-600 flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">4</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Measurable Results</h3>
@@ -361,7 +361,7 @@ export default function DemoPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Industries We've Transformed
                 </span>
               </h2>
@@ -398,7 +398,7 @@ export default function DemoPage() {
         <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-black mb-8">
-              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                 Your Success Story
               </span>
               <br />
@@ -412,7 +412,7 @@ export default function DemoPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 btn-primary text-lg px-8 py-4"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-2xl transition-all duration-300 hover:scale-105 shadow-2xl"
               >
                 Start Your Transformation
                 <ArrowRight className="w-5 h-5" />
@@ -420,7 +420,7 @@ export default function DemoPage() {
               
               <Link
                 href="/services"
-                className="btn-secondary text-lg px-8 py-4"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 font-bold rounded-xl transition-all duration-300 hover:bg-white/20"
               >
                 Explore Our Services
               </Link>
@@ -428,15 +428,15 @@ export default function DemoPage() {
             
             <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-400">
               <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
+                <CheckCircle className="w-4 h-4 text-green-500" />
                 Free consultation
               </div>
               <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
+                <CheckCircle className="w-4 h-4 text-green-500" />
                 Custom strategy
               </div>
               <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
+                <CheckCircle className="w-4 h-4 text-green-500" />
                 Results guaranteed
               </div>
             </div>

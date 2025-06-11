@@ -10,28 +10,28 @@ const contactInfo = [
     icon: Phone,
     title: "Phone",
     details: ["Request call via WhatsApp", "+971 56 566 3377"],
-    color: "text-green-400",
+    color: "text-green-500",
     action: "call"
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
     details: ["Instant messaging", "24/7 Support"],
-    color: "text-green-500",
+    color: "text-green-600",
     action: "whatsapp"
   },
   {
     icon: Mail,
     title: "Email",
     details: ["hello@vizionaire.com", "support@vizionaire.com"],
-    color: "text-blue-400",
+    color: "text-red-500",
     action: "email"
   },
   {
     icon: Clock,
     title: "Hours",
     details: ["Sun-Thu: 9AM-6PM", "24/7 Emergency Support"],
-    color: "text-purple-400",
+    color: "text-amber-500",
     action: "none"
   }
 ]
@@ -66,7 +66,7 @@ const quickActions = [
     icon: Send,
     title: "Quick Email",
     subtitle: "Response within 2h",
-    color: "from-blue-600 to-blue-700",
+    color: "from-red-600 to-red-700",
     action: "email"
   }
 ]
@@ -134,7 +134,7 @@ export default function ContactPage() {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center p-8">
-          <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
+          <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
           <h1 className="text-4xl font-black text-white mb-4">Message Sent!</h1>
           <p className="text-xl text-gray-300 mb-8">
             Thank you for contacting us. We'll get back to you within 24 hours.
@@ -142,13 +142,13 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => setIsSubmitted(false)}
-              className="btn-secondary"
+              className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 font-bold rounded-xl transition-all duration-300 hover:bg-white/20"
             >
               Send Another Message
             </button>
             <button
               onClick={handleWhatsAppClick}
-              className="flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold transition-all duration-300"
+              className="flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp for Faster Response
@@ -167,12 +167,12 @@ export default function ContactPage() {
         {/* Hero Section */}
         <section className="relative py-20 px-6 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/10 to-cyan-900/20" />
+            <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-amber-900/10 to-green-900/20" />
           </div>
           
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-black mb-8">
-              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                 Let's Talk
               </span>
             </h1>
@@ -188,7 +188,7 @@ export default function ContactPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-black mb-4">
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Quick Contact
                 </span>
               </h2>
@@ -235,7 +235,7 @@ export default function ContactPage() {
                     ))}
                     {info.action !== 'none' && (
                       <div className="mt-4">
-                        <span className="inline-flex items-center gap-1 text-sm text-pink-400 font-medium">
+                        <span className="inline-flex items-center gap-1 text-sm text-red-500 font-medium">
                           Click to {info.action === 'call' ? 'request call' : info.action === 'whatsapp' ? 'WhatsApp' : 'email'}
                           <Zap className="w-3 h-3" />
                         </span>
@@ -251,7 +251,7 @@ export default function ContactPage() {
               {/* Contact Form */}
               <div>
                 <h2 className="text-3xl font-black mb-8">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                     Get Free Consultation
                   </span>
                 </h2>
@@ -357,7 +357,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 px-8 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full py-4 px-8 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
@@ -377,14 +377,14 @@ export default function ContactPage() {
               {/* Additional Info */}
               <div>
                 <h2 className="text-3xl font-black mb-8">
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                     What Happens Next?
                   </span>
                 </h2>
                 
                 <div className="space-y-8">
                   <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-red-600 to-red-500 flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-white font-bold text-sm">1</span>
                     </div>
                     <div>
@@ -394,7 +394,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-600 to-green-500 flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-white font-bold text-sm">2</span>
                     </div>
                     <div>
@@ -404,7 +404,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-white font-bold text-sm">3</span>
                     </div>
                     <div>
@@ -414,7 +414,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-red-600 to-green-600 flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-white font-bold text-sm">4</span>
                     </div>
                     <div>
@@ -424,7 +424,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-white/10">
+                <div className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-red-500/10 to-green-500/10 border border-white/10">
                   <h3 className="text-xl font-bold text-white mb-4">🚀 Free Bonus</h3>
                   <p className="text-gray-300 mb-4">
                     Book a consultation this week and receive a complimentary competitor analysis 
@@ -436,9 +436,9 @@ export default function ContactPage() {
                 </div>
 
                 {/* WhatsApp CTA in sidebar */}
-                <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20">
+                <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <MessageCircle className="w-6 h-6 text-green-400" />
+                    <MessageCircle className="w-6 h-6 text-green-500" />
                     Need Immediate Help?
                   </h3>
                   <p className="text-gray-300 mb-4">
@@ -446,7 +446,7 @@ export default function ContactPage() {
                   </p>
                   <button
                     onClick={handleWhatsAppClick}
-                    className="w-full py-3 px-6 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                    className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
                   >
                     <MessageCircle className="w-5 h-5" />
                     Start WhatsApp Chat
@@ -460,7 +460,7 @@ export default function ContactPage() {
         {/* Emergency Contact Section */}
         <section className="py-12 px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="p-8 rounded-3xl bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20">
+            <div className="p-8 rounded-3xl bg-gradient-to-r from-red-500/10 to-amber-500/10 border border-red-500/20">
               <div className="text-center">
                 <h2 className="text-2xl font-black text-white mb-4">🚨 Emergency Support</h2>
                 <p className="text-gray-300 mb-6">
@@ -476,7 +476,7 @@ export default function ContactPage() {
                   </button>
                   <button
                     onClick={handleWhatsAppClick}
-                    className="flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold transition-all duration-300 hover:scale-105"
+                    className="flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold transition-all duration-300 hover:scale-105"
                   >
                     <MessageCircle className="w-5 h-5" />
                     24/7 WhatsApp Support

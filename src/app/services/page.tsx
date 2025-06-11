@@ -30,7 +30,7 @@ const services = [
       '95+ PageSpeed scores'
     ],
     startingPrice: '11,000 AED',
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-red-600 to-red-500'
   },
   {
     id: 'social-media',
@@ -52,7 +52,7 @@ const services = [
       '200% boost in reach'
     ],
     startingPrice: '5,500 AED',
-    color: 'from-pink-500 to-rose-600'
+    color: 'from-green-600 to-green-500'
   },
   {
     id: 'automation',
@@ -74,7 +74,7 @@ const services = [
       '250% boost in sales efficiency'
     ],
     startingPrice: '7,350 AED',
-    color: 'from-purple-500 to-indigo-600'
+    color: 'from-amber-600 to-amber-500'
   },
   {
     id: 'seo',
@@ -96,7 +96,7 @@ const services = [
       'Page 1 rankings guaranteed'
     ],
     startingPrice: '4,770 AED',
-    color: 'from-green-500 to-teal-600'
+    color: 'from-red-600 to-green-600'
   },
   {
     id: 'paid-advertising',
@@ -118,7 +118,7 @@ const services = [
       '300% increase in conversions'
     ],
     startingPrice: '3,670 AED',
-    color: 'from-yellow-500 to-orange-600'
+    color: 'from-green-600 to-amber-500'
   },
   {
     id: 'analytics',
@@ -140,7 +140,7 @@ const services = [
       '200% improvement in targeting'
     ],
     startingPrice: '2,930 AED',
-    color: 'from-cyan-500 to-blue-600'
+    color: 'from-amber-600 to-red-600'
   }
 ]
 
@@ -148,22 +148,26 @@ const processSteps = [
   {
     step: '01',
     title: 'Discovery',
-    description: 'We analyze your business, goals, and competition to create the perfect strategy.'
+    description: 'We analyze your business, goals, and competition to create the perfect strategy.',
+    color: 'from-red-600 to-red-500'
   },
   {
     step: '02',
     title: 'Strategy',
-    description: 'Custom action plan tailored to your industry and target audience.'
+    description: 'Custom action plan tailored to your industry and target audience.',
+    color: 'from-green-600 to-green-500'
   },
   {
     step: '03',
     title: 'Implementation',
-    description: 'Expert execution of campaigns with continuous monitoring and optimization.'
+    description: 'Expert execution of campaigns with continuous monitoring and optimization.',
+    color: 'from-amber-600 to-amber-500'
   },
   {
     step: '04',
     title: 'Results',
-    description: 'Measurable growth and ROI with detailed reporting and insights.'
+    description: 'Measurable growth and ROI with detailed reporting and insights.',
+    color: 'from-red-600 to-green-600'
   }
 ]
 
@@ -176,12 +180,12 @@ export default function ServicesPage() {
         {/* Hero Section */}
         <section className="relative py-20 px-6 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/10 to-cyan-900/20" />
+            <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-amber-900/10 to-green-900/20" />
           </div>
           
           <div className="relative z-10 max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-black mb-8">
-              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                 Complete Digital
               </span>
               <br />
@@ -193,10 +197,10 @@ export default function ServicesPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105">
                 Get Free Consultation
               </Link>
-              <Link href="#services" className="btn-secondary text-lg px-8 py-4">
+              <Link href="#services" className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 font-bold rounded-xl transition-all duration-300 hover:bg-white/20">
                 Explore Services
               </Link>
             </div>
@@ -208,7 +212,7 @@ export default function ServicesPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Our Services
                 </span>
               </h2>
@@ -242,12 +246,12 @@ export default function ServicesPage() {
                         <ul className="space-y-2">
                           {service.features.slice(0, 3).map((feature, j) => (
                             <li key={j} className="text-gray-300 flex items-center gap-2 text-sm">
-                              <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                              <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
                           {service.features.length > 3 && (
-                            <li className="text-pink-400 text-sm">
+                            <li className="text-red-500 text-sm">
                               +{service.features.length - 3} more features
                             </li>
                           )}
@@ -259,7 +263,7 @@ export default function ServicesPage() {
                         <ul className="space-y-2">
                           {service.results.map((result, j) => (
                             <li key={j} className="text-gray-300 flex items-center gap-2 text-sm">
-                              <TrendingUp className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                              <TrendingUp className="w-4 h-4 text-green-500 flex-shrink-0" />
                               {result}
                             </li>
                           ))}
@@ -294,7 +298,7 @@ export default function ServicesPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Our Process
                 </span>
               </h2>
@@ -306,7 +310,7 @@ export default function ServicesPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, i) => (
                 <div key={i} className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                  <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold text-sm mb-4">
+                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${step.color} text-white font-bold text-sm mb-4`}>
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
@@ -322,7 +326,7 @@ export default function ServicesPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Why Choose VIZIONAIRE?
                 </span>
               </h2>
@@ -330,19 +334,19 @@ export default function ServicesPage() {
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <Star className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
+                <Star className="w-12 h-12 text-amber-500 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Proven Results</h3>
                 <p className="text-gray-300">500+ successful campaigns with an average 300% ROI increase for our clients.</p>
               </div>
               
               <div className="text-center p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <TrendingUp className="w-12 h-12 text-green-400 mx-auto mb-6" />
+                <TrendingUp className="w-12 h-12 text-green-500 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">MENA Expertise</h3>
                 <p className="text-gray-300">Deep understanding of Middle Eastern markets and consumer behavior.</p>
               </div>
               
               <div className="text-center p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <Check className="w-12 h-12 text-pink-400 mx-auto mb-6" />
+                <Check className="w-12 h-12 text-red-500 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">ROI Guarantee</h3>
                 <p className="text-gray-300">We guarantee positive ROI within 90 days or we work for free until you see results.</p>
               </div>
@@ -354,7 +358,7 @@ export default function ServicesPage() {
         <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-black mb-8">
-              <span className="bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                 Ready to Transform
               </span>
               <br />
@@ -365,7 +369,7 @@ export default function ServicesPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 btn-primary text-lg px-8 py-4"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-2xl transition-all duration-300 hover:scale-105 shadow-2xl"
             >
               Get Free Consultation
               <ArrowRight className="w-5 h-5" />

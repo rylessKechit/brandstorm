@@ -24,7 +24,7 @@ const plans = [
       "Live Chat Support"
     ],
     popular: false,
-    color: "from-blue-500 to-cyan-500",
+    color: "from-red-600 to-red-500",
     savings: "Best for testing the waters"
   },
   {
@@ -43,7 +43,7 @@ const plans = [
       "Priority Support"
     ],
     popular: true,
-    color: "from-pink-500 to-purple-500",
+    color: "from-green-600 to-green-500",
     savings: "Most popular choice"
   },
   {
@@ -62,7 +62,7 @@ const plans = [
       "White-label Solutions"
     ],
     popular: false,
-    color: "from-orange-500 to-red-500",
+    color: "from-amber-600 to-amber-500",
     savings: "Maximum ROI potential"
   }
 ]
@@ -122,12 +122,12 @@ export default function PricingPage() {
         {/* Hero Section */}
         <section className="relative py-20 px-6 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/10 to-cyan-900/20" />
+            <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-amber-900/10 to-green-900/20" />
           </div>
           
           <div className="relative z-10 max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-black mb-8">
-              <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                 Investment Plans
               </span>
               <br />
@@ -139,10 +139,10 @@ export default function PricingPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105">
                 Get Custom Quote
               </Link>
-              <Link href="/demo" className="btn-secondary text-lg px-8 py-4">
+              <Link href="/demo" className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 font-bold rounded-xl transition-all duration-300 hover:bg-white/20">
                 See Our Results
               </Link>
             </div>
@@ -157,7 +157,7 @@ export default function PricingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Optional Add-ons
                 </span>
               </h2>
@@ -184,8 +184,8 @@ export default function PricingPage() {
         {/* ROI Guarantee */}
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center p-12 rounded-3xl bg-gradient-to-br from-green-500/10 to-teal-500/10 border border-green-500/20">
-              <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
+            <div className="text-center p-12 rounded-3xl bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20">
+              <TrendingUp className="w-16 h-16 text-green-500 mx-auto mb-6" />
               <h2 className="text-4xl font-black text-white mb-6">ROI Guarantee</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We guarantee positive ROI within 90 days or we'll work for free until you see measurable results. 
@@ -193,19 +193,19 @@ export default function PricingPage() {
               </p>
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-black text-green-400 mb-2">90 Days</div>
+                  <div className="text-3xl font-black text-green-500 mb-2">90 Days</div>
                   <div className="text-gray-300">ROI Guarantee</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-black text-green-400 mb-2">300%</div>
+                  <div className="text-3xl font-black text-green-500 mb-2">300%</div>
                   <div className="text-gray-300">Average ROI</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-black text-green-400 mb-2">500+</div>
+                  <div className="text-3xl font-black text-green-500 mb-2">500+</div>
                   <div className="text-gray-300">Success Stories</div>
                 </div>
               </div>
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105">
                 Claim Your Guarantee
               </Link>
             </div>
@@ -217,7 +217,7 @@ export default function PricingPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black mb-8">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                   Pricing FAQs
                 </span>
               </h2>
@@ -238,7 +238,7 @@ export default function PricingPage() {
         <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-black mb-8">
-              <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
                 Ready to Grow
               </span>
               <br />
@@ -251,7 +251,7 @@ export default function PricingPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 btn-primary text-lg px-8 py-4"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-green-600 text-white font-bold rounded-2xl transition-all duration-300 hover:scale-105 shadow-2xl"
               >
                 Get Custom Quote
                 <ArrowRight className="w-5 h-5" />
@@ -259,7 +259,7 @@ export default function PricingPage() {
               
               <Link
                 href="/services"
-                className="btn-secondary text-lg px-8 py-4"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 font-bold rounded-xl transition-all duration-300 hover:bg-white/20"
               >
                 View All Services
               </Link>
@@ -267,15 +267,15 @@ export default function PricingPage() {
             
             <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-400">
               <div className="flex items-center justify-center gap-2">
-                <Check className="w-4 h-4 text-green-400" />
+                <Check className="w-4 h-4 text-green-500" />
                 Free consultation
               </div>
               <div className="flex items-center justify-center gap-2">
-                <Check className="w-4 h-4 text-green-400" />
+                <Check className="w-4 h-4 text-green-500" />
                 Custom strategy
               </div>
               <div className="flex items-center justify-center gap-2">
-                <Check className="w-4 h-4 text-green-400" />
+                <Check className="w-4 h-4 text-green-500" />
                 No long-term contracts
               </div>
             </div>
