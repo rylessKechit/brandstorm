@@ -37,15 +37,15 @@ export function TestimonialsMini() {
   }, [])
 
   return (
-    <section className="relative py-20 px-6">
+    <section className="relative py-24 px-6 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-8">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-black mb-6">
+            <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
               What Clients Say
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             Trusted by businesses across the MENA region
           </p>
         </div>
@@ -54,29 +54,29 @@ export function TestimonialsMini() {
           {testimonials.map((testimonial, i) => (
             <div 
               key={i}
-              className={`group relative p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-700 transform hover:scale-105 ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+              className={`group relative p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-700 transform hover:scale-105 ${
+                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 to-green-600/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
-                <Quote className="w-6 h-6 text-pink-400 mb-4" />
+                <Quote className="w-8 h-8 text-red-500 mb-6" />
                 
-                <div className="flex items-center gap-1 mb-4">
+                <div className="flex items-center gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 text-cyan-400 fill-current" />
+                    <Star key={j} className="w-5 h-5 text-amber-500 fill-current" />
                   ))}
                 </div>
                 
-                <p className="text-gray-300 mb-6 leading-relaxed text-sm">"{testimonial.text}"</p>
+                <p className="text-gray-300 mb-8 leading-relaxed font-light">"{testimonial.text}"</p>
                 
-                <div className="flex items-center gap-3">
-                  <div className="text-2xl">{testimonial.avatar}</div>
+                <div className="flex items-center gap-4">
+                  <div className="text-3xl">{testimonial.avatar}</div>
                   <div>
-                    <div className="font-bold text-white text-sm">{testimonial.name}</div>
-                    <div className="text-gray-400 text-xs">{testimonial.company}</div>
+                    <div className="font-bold text-white">{testimonial.name}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export function TestimonialsMini() {
         <div className="text-center mt-12">
           <Link
             href="/about#testimonials"
-            className="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-bold transition-colors duration-300"
+            className="inline-flex items-center gap-2 text-red-500 hover:text-red-400 font-bold transition-colors duration-300"
           >
             Read More Success Stories
             <ArrowRight className="w-4 h-4" />

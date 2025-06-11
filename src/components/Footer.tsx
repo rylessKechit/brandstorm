@@ -19,16 +19,25 @@ export function Footer(): JSX.Element {
   }
 
   return (
-    <footer className="relative py-12 px-6 border-t border-white/10">
+    <footer className="relative py-16 px-6 border-t border-white/10 bg-black">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-5 gap-8 mb-8">
+        <div className="grid md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="text-2xl font-black text-gradient">
-              VIZIONAIRE
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 relative">
+                <img 
+                  src="/logo.png" 
+                  alt="VIZIONAIRE Logo" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <span className="text-xl font-black bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
+                VIZIONAIRE
+              </span>
             </Link>
-            <p className="text-gray-400 mt-2 mb-6">
-              Revolutionizing digital marketing in the Middle East
+            <p className="text-gray-400 mb-6 font-light">
+              Revolutionizing digital marketing in the Middle East with AI-powered solutions and guaranteed results.
             </p>
             
             {/* Contact Actions */}
@@ -51,7 +60,7 @@ export function Footer(): JSX.Element {
               
               <button
                 onClick={handleEmailClick}
-                className="flex items-center gap-3 w-full sm:w-auto px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105"
+                className="flex items-center gap-3 w-full sm:w-auto px-4 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105"
               >
                 <Mail className="w-4 h-4" />
                 hello@vizionaire.com
@@ -95,7 +104,7 @@ export function Footer(): JSX.Element {
             <div className="mt-6">
               <div className="flex items-center gap-2 text-gray-400 mb-2">
                 <MapPin className="w-4 h-4" />
-                <span className="text-sm">DIFC, Dubai, UAE</span>
+                <span className="text-sm">DIFC, Dubai, UAE 🇦🇪</span>
               </div>
               <p className="text-xs text-gray-500">Hours: Sun-Thu 9AM-6PM GST</p>
             </div>
@@ -105,7 +114,7 @@ export function Footer(): JSX.Element {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10">
           <div className="text-gray-400 text-center md:text-left">
-            <p className="mb-2">🌟 Made with ❤️ in Dubai</p>
+            <p className="mb-2">🇦🇪 Made with ❤️ in Dubai</p>
             <p>© 2025 VIZIONAIRE - All rights reserved</p>
             <p className="text-xs mt-2 opacity-70">Powered by ITI SERVICES</p>
           </div>
@@ -124,9 +133,9 @@ export function Footer(): JSX.Element {
         </div>
 
         {/* Emergency Contact Banner */}
-        <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20">
+        <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20">
           <div className="text-center">
-            <p className="text-green-300 font-medium mb-2">🚨 24/7 Emergency Support Available</p>
+            <p className="text-green-300 font-medium mb-4">🚨 24/7 Emergency Support Available</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={handleCallClick}

@@ -18,7 +18,7 @@ const plans = [
       "Live Chat Support"
     ],
     popular: false,
-    color: "from-blue-500 to-cyan-500"
+    color: "from-red-600 to-red-500"
   },
   {
     name: "Professional", 
@@ -36,7 +36,7 @@ const plans = [
       "Priority Support"
     ],
     popular: true,
-    color: "from-pink-500 to-purple-500"
+    color: "from-green-600 to-green-500"
   },
   {
     name: "Enterprise",
@@ -54,7 +54,7 @@ const plans = [
       "White-label Solutions"
     ],
     popular: false,
-    color: "from-orange-500 to-red-500"
+    color: "from-amber-600 to-amber-500"
   }
 ]
 
@@ -67,15 +67,15 @@ export function Pricing() {
   }, [])
 
   return (
-    <section id="pricing" className="relative py-20 px-6">
+    <section id="pricing" className="relative py-24 px-6 bg-gray-950/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-8">
-            <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-black mb-6">
+            <span className="bg-gradient-to-r from-red-600 via-amber-500 to-green-600 bg-clip-text text-transparent">
               Investment Plans
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8 font-light">
             Choose the perfect plan for your business growth. All plans include setup, strategy, and ongoing optimization. Prices in AED.
           </p>
           
@@ -86,10 +86,10 @@ export function Pricing() {
               onClick={() => setIsAnnual(!isAnnual)}
               className="relative w-14 h-7 bg-gray-700 rounded-full p-1 transition-colors duration-300"
             >
-              <div className={`w-5 h-5 bg-pink-500 rounded-full transition-transform duration-300 ${isAnnual ? 'translate-x-7' : 'translate-x-0'}`} />
+              <div className={`w-5 h-5 bg-gradient-to-r from-red-500 to-green-500 rounded-full transition-transform duration-300 ${isAnnual ? 'translate-x-7' : 'translate-x-0'}`} />
             </button>
             <span className={`text-sm ${isAnnual ? 'text-white' : 'text-gray-400'}`}>
-              Annual <span className="text-green-400">(Save 20%)</span>
+              Annual <span className="text-green-500">(Save 20%)</span>
             </span>
           </div>
         </div>
@@ -99,13 +99,13 @@ export function Pricing() {
             <div 
               key={i}
               className={`relative group transition-all duration-700 transform hover:scale-105 ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               } ${plan.popular ? 'lg:-mt-8' : ''}`}
               style={{ transitionDelay: `${i * 200}ms` }}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <div className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+                  <div className="bg-gradient-to-r from-green-600 to-green-500 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2">
                     <Star className="w-4 h-4" />
                     Most Popular
                   </div>
@@ -113,7 +113,7 @@ export function Pricing() {
               )}
               
               <div className={`relative p-8 rounded-3xl bg-white/5 backdrop-blur-sm border transition-all duration-500 h-full ${
-                plan.popular ? 'border-pink-500/50 bg-gradient-to-br from-pink-500/10 to-purple-500/10' : 'border-white/10 hover:border-white/20'
+                plan.popular ? 'border-green-500/50 bg-gradient-to-br from-green-500/10 to-green-600/10' : 'border-white/10 hover:border-white/20'
               }`}>
                 <div className={`absolute inset-0 bg-gradient-to-br ${plan.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                 
@@ -132,7 +132,7 @@ export function Pricing() {
                       ${isAnnual ? Math.round(parseInt(plan.price) * 0.8) : plan.price} USD
                     </div>
                     {isAnnual && (
-                      <div className="text-green-400 text-sm mt-2">
+                      <div className="text-green-500 text-sm mt-2 text-center">
                         Save {Math.round(parseInt(plan.price) * 0.2 * 12 * 3.67)} AED annually
                       </div>
                     )}
@@ -141,7 +141,7 @@ export function Pricing() {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, j) => (
                       <li key={j} className="flex items-start gap-3 text-gray-300">
-                        <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -151,7 +151,7 @@ export function Pricing() {
                     href="/contact"
                     className={`block w-full py-4 px-6 text-center font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 group ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg hover:shadow-pink-500/30'
+                        ? 'bg-gradient-to-r from-green-600 to-green-500 text-white shadow-lg hover:shadow-green-500/30'
                         : 'bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20'
                     }`}
                   >
@@ -171,7 +171,7 @@ export function Pricing() {
           <p className="text-gray-400 mb-4">Need a custom solution?</p>
           <Link 
             href="/contact"
-            className="text-pink-400 hover:text-pink-300 font-bold transition-colors duration-300"
+            className="text-red-500 hover:text-red-400 font-bold transition-colors duration-300"
           >
             Contact us for enterprise pricing →
           </Link>
