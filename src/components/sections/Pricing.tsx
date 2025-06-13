@@ -2,62 +2,73 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Check, Star, Zap, ArrowRight } from 'lucide-react'
+import { Check, Star, ArrowRight, Zap, Crown, Rocket } from 'lucide-react'
 
-const plans = [
+const pricingPlans = [
   {
+    icon: <Zap className="w-8 h-8" />,
     name: "Starter",
-    price: "299",
-    period: "mois",
-    description: "Parfait pour les petites entreprises qui débutent",
+    subtitle: "Perfect for small businesses",
+    price: "5,500",
+    period: "AED/month",
+    description: "Essential digital marketing to get you started",
     features: [
-      "Gestion Réseaux Sociaux (2 plateformes)",
-      "Développement Site Web Basique", 
-      "Configuration Email Marketing",
-      "Rapport Analytics Mensuel",
-      "Support Chat en Direct"
+      "Social media management (2 platforms)",
+      "Basic content creation (8 posts/month)",
+      "Monthly analytics report",
+      "Email support",
+      "Basic SEO optimization",
+      "Setup & onboarding included"
     ],
-    popular: false,
-    badge: "Idéal pour démarrer",
-    color: "border-gray-200 hover:border-gray-300"
+    buttonText: "Start Growing",
+    color: "from-green-600 to-green-500",
+    popular: false
   },
   {
-    name: "Professional", 
-    price: "699",
-    period: "mois",
-    description: "Pour les entreprises en croissance qui veulent plus",
+    icon: <Crown className="w-8 h-8" />,
+    name: "Professional",
+    subtitle: "Most popular for growing companies",
+    price: "11,000",
+    period: "AED/month",
+    description: "Complete marketing solution with automation",
     features: [
-      "Tout du plan Starter",
-      "Gestion Réseaux Sociaux (5 plateformes)",
-      "Site Web Avancé + E-commerce",
-      "Automatisation Marketing",
-      "Optimisation SEO",
-      "Gestion Publicité Payante",
-      "Appels Stratégie Hebdomadaires",
-      "Support Prioritaire"
+      "Everything in Starter",
+      "Multi-platform management (4 platforms)",
+      "Advanced content creation (20 posts/month)",
+      "Marketing automation setup",
+      "Weekly performance reports",
+      "Priority support",
+      "Lead generation campaigns",
+      "Competitor analysis",
+      "Custom landing pages"
     ],
-    popular: true,
-    badge: "Le plus populaire",
-    color: "border-red-600 ring-2 ring-red-600"
+    buttonText: "Go Professional",
+    color: "from-red-600 to-amber-500",
+    popular: true
   },
   {
+    icon: <Rocket className="w-8 h-8" />,
     name: "Enterprise",
-    price: "1499", 
-    period: "mois",
-    description: "Pour les entreprises établies prêtes à scaler",
+    subtitle: "For companies ready to dominate",
+    price: "22,000",
+    period: "AED/month",
+    description: "Full-scale digital transformation",
     features: [
-      "Tout du plan Professional",
-      "Gestion Plateformes Illimitées",
-      "Développement Sur-Mesure",
-      "Analytics IA Avancés",
-      "Account Manager Dédié",
-      "Support Téléphone 24/7",
-      "Intégrations Personnalisées",
-      "Solutions White-label"
+      "Everything in Professional",
+      "Unlimited platform management",
+      "Daily content creation (60+ posts/month)",
+      "Advanced AI automation",
+      "Real-time dashboard & reporting",
+      "Dedicated account manager",
+      "24/7 priority support",
+      "Custom integrations",
+      "Influencer partnerships",
+      "Video content production",
+      "Advanced analytics & insights"
     ],
-    popular: false,
-    badge: "Maximum ROI",
-    color: "border-amber-200 hover:border-amber-300"
+    buttonText: "Dominate Now",
+    color: "from-purple-600 to-blue-500",
+    popular: false
   }
 ]
 
@@ -69,148 +80,181 @@ export function Pricing() {
     setIsVisible(true)
   }, [])
 
+  const handleCallClick = () => {
+    const message = encodeURIComponent('Hello! I am interested in VIZIONAIRE pricing plans. Can we schedule a consultation to discuss my needs?')
+    window.open(`https://wa.me/971565663377?text=${message}`, '_blank')
+  }
+
   return (
-    <section id="pricing" className="bg-gray-50 py-20 lg:py-28">
+    <section className="bg-gray-50 py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16 lg:mb-20">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-serif">
-            Plans d'<span className="text-red-600">Investissement</span>
-          </h2>
-          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Choisissez le plan parfait pour votre croissance. Tous les plans incluent setup, 
-            stratégie et optimisation continue. <span className="font-semibold text-amber-600">Prix en AED</span>.
-          </p>
-          
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <span className={`text-lg font-medium ${!isAnnual ? 'text-gray-900' : 'text-gray-500'}`}>Mensuel</span>
-            <button
-              onClick={() => setIsAnnual(!isAnnual)}
-              className="relative w-16 h-8 bg-gray-300 rounded-full p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-red-600"
-            >
-              <div className={`w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ${isAnnual ? 'translate-x-8 bg-red-600' : 'translate-x-0'}`} />
-            </button>
-            <span className={`text-lg font-medium ${isAnnual ? 'text-gray-900' : 'text-gray-500'}`}>
-              Annuel <span className="text-green-600 font-bold">(Économisez 20%)</span>
-            </span>
+        
+        {/* Header */}
+        <div className="text-center mb-20">
+          <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <h2 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
+              Choose your <span className="text-red-600">plan</span>.
+            </h2>
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light mb-12">
+              Transparent pricing with no hidden fees. Get results or your money back.
+            </p>
+            
+            {/* Billing Toggle */}
+            <div className="inline-flex items-center bg-white rounded-full p-1 shadow-sm border border-gray-200">
+              <button
+                onClick={() => setIsAnnual(false)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  !isAnnual 
+                    ? 'bg-red-600 text-white shadow-sm' 
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setIsAnnual(true)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  isAnnual 
+                    ? 'bg-red-600 text-white shadow-sm' 
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                Annual
+                <span className="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Save 20%</span>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {plans.map((plan, i) => (
+        {/* Pricing Cards */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+          {pricingPlans.map((plan, i) => (
             <div 
               key={i}
-              className={`relative bg-white rounded-3xl p-8 shadow-lg transition-all duration-700 transform hover:-translate-y-2 border-2 ${plan.color} ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-              } ${plan.popular ? 'lg:-mt-8 shadow-2xl' : ''}`}
+              className={`relative group transition-all duration-700 ${
+                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+              } ${plan.popular ? 'scale-105 lg:scale-110' : ''}`}
               style={{ transitionDelay: `${i * 200}ms` }}
             >
+              
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <div className="bg-red-600 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg">
-                    <Star className="w-4 h-4" />
-                    {plan.badge}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-500 to-amber-500 text-white text-sm font-bold rounded-full">
+                    <Star className="w-4 h-4 fill-current" />
+                    Most Popular
                   </div>
                 </div>
               )}
-              
-              {/* Plan Header */}
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2 font-serif">{plan.name}</h3>
-                <p className="text-gray-600 mb-6">{plan.description}</p>
+
+              {/* Card */}
+              <div className={`relative bg-white rounded-3xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-500 border-2 ${
+                plan.popular 
+                  ? 'border-red-200 hover:border-red-300' 
+                  : 'border-gray-200 hover:border-gray-300'
+              }`}>
                 
-                <div className="mb-6">
-                  <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-5xl font-bold text-gray-900">
-                      {isAnnual ? Math.round(parseInt(plan.price) * 0.8 * 3.67) : Math.round(parseInt(plan.price) * 3.67)} AED
-                    </span>
-                    <span className="text-gray-500">/{plan.period}</span>
+                {/* Background Gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${plan.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${plan.color} flex items-center justify-center mb-6 text-white transition-transform duration-300 group-hover:scale-110`}>
+                    {plan.icon}
                   </div>
-                  <div className="text-gray-500 text-sm">
-                    ${isAnnual ? Math.round(parseInt(plan.price) * 0.8) : plan.price} USD
-                  </div>
-                  {isAnnual && (
-                    <div className="text-green-600 text-sm mt-2 font-semibold">
-                      Économisez {Math.round(parseInt(plan.price) * 0.2 * 12 * 3.67)} AED annuellement
+                  
+                  {/* Plan Info */}
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <p className="text-gray-600 mb-6">{plan.subtitle}</p>
+                  
+                  {/* Pricing */}
+                  <div className="mb-6">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-4xl font-bold text-gray-900">
+                        {isAnnual ? Math.round(parseInt(plan.price) * 0.8).toLocaleString() : parseInt(plan.price).toLocaleString()}
+                      </span>
+                      <span className="text-lg text-gray-600">{plan.period}</span>
                     </div>
-                  )}
-                </div>
-                
-                {!plan.popular && (
-                  <div className="text-sm font-medium text-gray-600 bg-gray-50 px-4 py-2 rounded-full">
-                    {plan.badge}
+                    {isAnnual && (
+                      <div className="text-sm text-green-600 font-medium mt-1">
+                        Save {parseInt(plan.price) * 12 * 0.2} AED annually
+                      </div>
+                    )}
                   </div>
-                )}
+                  
+                  <p className="text-gray-600 mb-8">{plan.description}</p>
+                  
+                  {/* Features */}
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, j) => (
+                      <li key={j} className="flex items-start gap-3">
+                        <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  {/* CTA Button */}
+                  <button
+                    onClick={handleCallClick}
+                    className={`w-full py-4 px-6 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-red-600 to-amber-500 text-white shadow-lg hover:shadow-xl'
+                        : 'bg-gray-900 text-white hover:bg-gray-800 shadow-md hover:shadow-lg'
+                    }`}
+                  >
+                    {plan.buttonText}
+                  </button>
+                  
+                  <div className="text-center mt-4">
+                    <p className="text-xs text-gray-500">No setup fees • Cancel anytime</p>
+                  </div>
+                </div>
               </div>
-              
-              {/* Features List */}
-              <ul className="space-y-4 mb-8">
-                {plan.features.map((feature, j) => (
-                  <li key={j} className="flex items-start gap-3 text-gray-700">
-                    <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="leading-relaxed">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              {/* CTA Button */}
-              <Link
-                href="/contact"
-                className={`block w-full py-4 px-6 text-center font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 ${
-                  plan.popular 
-                    ? 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl'
-                    : 'bg-gray-900 text-white hover:bg-gray-800'
-                }`}
-              >
-                <span className="flex items-center justify-center gap-2">
-                  Commencer Maintenant
-                  {plan.popular && <Zap className="w-4 h-4" />}
-                  <ArrowRight className="w-4 h-4" />
-                </span>
-              </Link>
             </div>
           ))}
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-16 lg:mt-20 text-center">
-          <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg border border-gray-200">
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 font-serif">
-              Besoin d'une Solution Sur-Mesure ?
-            </h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Nous créons des packages personnalisés pour les besoins uniques. 
-              Contactez-nous pour un devis entreprise et une stratégie adaptée.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                href="/contact"
-                className="px-8 py-4 bg-red-600 text-white rounded-xl font-bold hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Devis Personnalisé
-              </Link>
-              <Link 
-                href="/demo"
-                className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl font-bold hover:bg-gray-50 hover:border-gray-400 transition-all duration-300"
-              >
-                Voir Nos Résultats
-              </Link>
-            </div>
-            
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-600">
-              <div className="flex items-center justify-center gap-2">
-                <Check className="w-4 h-4 text-green-600" />
-                Consultation gratuite incluse
+        {/* Enterprise CTA */}
+        <div className="text-center">
+          <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg border border-gray-200 max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Need a Custom Solution?
+              </h3>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                We create personalized packages for unique business needs. 
+                Contact us for a custom quote and tailored strategy.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button
+                  onClick={handleCallClick}
+                  className="px-8 py-4 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Custom Quote
+                </button>
+                <Link 
+                  href="/demo"
+                  className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-full font-bold hover:bg-gray-50 hover:border-gray-400 transition-all duration-300"
+                >
+                  View Results
+                </Link>
               </div>
-              <div className="flex items-center justify-center gap-2">
-                <Check className="w-4 h-4 text-green-600" />
-                Stratégie sur-mesure
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <Check className="w-4 h-4 text-green-600" />
-                Aucun contrat long terme
+              
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-600">
+                <div className="flex items-center justify-center gap-2">
+                  <Check className="w-4 h-4 text-green-600" />
+                  Free consultation included
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <Check className="w-4 h-4 text-green-600" />
+                  Custom strategy
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <Check className="w-4 h-4 text-green-600" />
+                  No long-term contracts
+                </div>
               </div>
             </div>
           </div>

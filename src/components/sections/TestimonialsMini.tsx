@@ -7,27 +7,27 @@ import { Star, Quote, ArrowRight } from 'lucide-react'
 const testimonials = [
   {
     name: "Ahmed K.",
-    company: "Fondateur Startup Tech",
+    company: "Tech Startup Founder",
     avatar: "👨‍💼",
     rating: 5,
-    text: "L'approche IA de VIZIONAIRE et leur expertise MENA est exactement ce dont nous avions besoin. Équipe professionnelle avec de vrais résultats.",
-    result: "+250% leads qualifiés"
+    text: "VIZIONAIRE's AI approach and MENA expertise is exactly what we needed. Professional team with real results.",
+    result: "+250% qualified leads"
   },
   {
     name: "Sarah M.", 
-    company: "Propriétaire E-commerce",
+    company: "E-commerce Owner",
     avatar: "👩‍💼",
     rating: 5,
-    text: "Enfin une équipe qui comprend le marché du Moyen-Orient. Leur garantie 90 jours montre une vraie confiance dans leur travail.",
-    result: "+180% revenus en ligne"
+    text: "Finally a team that understands the Middle East market. Their 90-day guarantee shows real confidence in their work.",
+    result: "+180% online revenue"
   },
   {
     name: "Omar H.",
-    company: "Manager Chaîne Restaurants",
+    company: "Restaurant Chain Manager",
     avatar: "👨‍💻",
     rating: 5,
-    text: "Le setup était incroyablement rapide et l'équipe est toujours disponible. J'adore l'approche sans contrat long terme.",
-    result: "+320% commandes online"
+    text: "The setup was incredibly fast and the team is always available. I love the no long-term contract approach.",
+    result: "+320% online orders"
   }
 ]
 
@@ -39,15 +39,17 @@ export function TestimonialsMini() {
   }, [])
 
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-white py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16 lg:mb-20">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-serif">
-            Ce Que Disent Nos <span className="text-red-600">Clients</span>
-          </h2>
-          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            La confiance de centaines d'entreprises à travers la région MENA
-          </p>
+        <div className="text-center mb-20">
+          <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <h2 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
+              What Our <span className="text-red-600">Clients</span> Say
+            </h2>
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+              The trust of hundreds of companies across the MENA region
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -92,42 +94,44 @@ export function TestimonialsMini() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-red-50 to-amber-50 rounded-3xl p-8 lg:p-12 border border-red-100">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="text-left">
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 font-serif">
-                  Plus de <span className="text-red-600">500+ Entreprises</span> Nous Font Confiance
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  De la startup à la grande entreprise, découvrez comment nous avons transformé 
-                  leur présence digitale avec des résultats mesurables et durables.
-                </p>
-                <Link
-                  href="/demo"
-                  className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-bold transition-colors duration-300"
-                >
-                  Voir Plus de Témoignages
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
-                  <div className="text-3xl font-bold text-red-600 mb-2">95%</div>
-                  <div className="text-gray-600 text-sm font-medium">Clients Satisfaits</div>
+        <div className="mt-20">
+          <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="bg-gradient-to-r from-red-50 to-amber-50 rounded-3xl p-8 lg:p-12 border border-red-100">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="text-left">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                    Over <span className="text-red-600">500+ Companies</span> Trust Us
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    From startups to large enterprises, discover how we've transformed 
+                    their digital presence with measurable and lasting results.
+                  </p>
+                  <Link
+                    href="/demo"
+                    className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-bold transition-colors duration-300"
+                  >
+                    View More Testimonials
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-                <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
-                  <div className="text-3xl font-bold text-amber-600 mb-2">4.9/5</div>
-                  <div className="text-gray-600 text-sm font-medium">Note Moyenne</div>
-                </div>
-                <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
-                  <div className="text-3xl font-bold text-green-600 mb-2">300%</div>
-                  <div className="text-gray-600 text-sm font-medium">ROI Moyen</div>
-                </div>
-                <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">2024</div>
-                  <div className="text-gray-600 text-sm font-medium">Fondée</div>
+                
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <div className="text-3xl font-bold text-red-600 mb-2">95%</div>
+                    <div className="text-gray-600 text-sm font-medium">Satisfied Clients</div>
+                  </div>
+                  <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <div className="text-3xl font-bold text-amber-600 mb-2">4.9/5</div>
+                    <div className="text-gray-600 text-sm font-medium">Average Rating</div>
+                  </div>
+                  <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <div className="text-3xl font-bold text-green-600 mb-2">300%</div>
+                    <div className="text-gray-600 text-sm font-medium">Average ROI</div>
+                  </div>
+                  <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">2024</div>
+                    <div className="text-gray-600 text-sm font-medium">Founded</div>
+                  </div>
                 </div>
               </div>
             </div>
