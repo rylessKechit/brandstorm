@@ -46,18 +46,18 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,191,36,0.1),transparent)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(234,88,12,0.1),transparent)] animate-pulse" style={{animationDelay: '2s'}} />
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
         <div className="text-center">
           
           {/* Badge */}
-          <div className={`inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium mb-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className={`inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium mb-6 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <span className="w-2 h-2 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full mr-3 animate-pulse"></span>
             🇦🇪 #1 Agency in Dubai & MENA Region
           </div>
           
           {/* Main Title */}
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight">
               We make your <br />
               <span className="bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent">
                 Vision
@@ -72,14 +72,14 @@ export function Hero() {
           
           {/* Subtitle */}
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
               Built for <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent font-medium">Middle East Excellence</span>.
             </p>
           </div>
 
           {/* Rotating Highlights */}
-          <div className={`mb-16 transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <div className="relative h-32 overflow-hidden">
+          <div className={`mb-12 transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+            <div className="relative h-24 overflow-hidden">
               {highlights.map((highlight, index) => (
                 <div 
                   key={index}
@@ -92,7 +92,7 @@ export function Hero() {
                   }`}
                 >
                   <div className="text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2">
                       {index === 0 ? (
                         <>
                           We make your{" "}
@@ -121,7 +121,7 @@ export function Hero() {
                         </>
                       )}
                     </h2>
-                    <p className="text-xl text-gray-400 mb-6">
+                    <p className="text-lg text-gray-400">
                       {highlight.subtitle}
                     </p>
                   </div>
@@ -130,12 +130,12 @@ export function Hero() {
             </div>
             
             {/* Slide Indicators */}
-            <div className="flex justify-center gap-3 mt-8">
+            <div className="flex justify-center gap-2 mt-6">
               {highlights.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentSlide 
                       ? 'bg-gradient-to-r from-amber-500 to-orange-500' 
                       : 'bg-white/30 hover:bg-white/50'
@@ -146,45 +146,45 @@ export function Hero() {
           </div>
 
           {/* CTA Buttons */}
-          <div className={`flex flex-col sm:flex-row gap-6 justify-center mb-16 transition-all duration-1000 delay-900 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center mb-12 transition-all duration-1000 delay-900 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
             <button
               onClick={handleCallClick}
-              className="px-8 py-4 bg-white text-black rounded-full font-semibold text-lg hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="px-7 py-3 bg-white text-black rounded-full font-semibold text-base hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Free Consultation
             </button>
             
             <Link
               href="/demo"
-              className="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold text-lg hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
+              className="px-7 py-3 border-2 border-white/30 text-white rounded-full font-semibold text-base hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
             >
-              <Play className="w-5 h-5 inline mr-2" />
+              <Play className="w-4 h-4 inline mr-2" />
               See Results
             </Link>
           </div>
 
           {/* Trust Indicators */}
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-1100 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <div className="flex items-center justify-center gap-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
-              <CheckCircle className="w-6 h-6 text-emerald-500" />
-              <span className="text-gray-300 font-medium">48h Setup Guaranteed</span>
+          <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto transition-all duration-1000 delay-1100 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+            <div className="flex items-center justify-center gap-2 p-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+              <CheckCircle className="w-5 h-5 text-emerald-500" />
+              <span className="text-gray-300 font-medium text-sm">48h Setup Guaranteed</span>
             </div>
-            <div className="flex items-center justify-center gap-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
-              <Award className="w-6 h-6 text-amber-500" />
-              <span className="text-gray-300 font-medium">90-Day ROI Guarantee</span>
+            <div className="flex items-center justify-center gap-2 p-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+              <Award className="w-5 h-5 text-amber-500" />
+              <span className="text-gray-300 font-medium text-sm">90-Day ROI Guarantee</span>
             </div>
-            <div className="flex items-center justify-center gap-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
-              <Users className="w-6 h-6 text-orange-500" />
-              <span className="text-gray-300 font-medium">MENA Specialists</span>
+            <div className="flex items-center justify-center gap-2 p-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+              <Users className="w-5 h-5 text-orange-500" />
+              <span className="text-gray-300 font-medium text-sm">MENA Specialists</span>
             </div>
           </div>
         </div>
       </div>
       
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-        <ChevronDown className="w-6 h-6 text-white/50 mx-auto animate-bounce" />
-        <p className="text-xs text-white/50 mt-2">Scroll to explore</p>
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center">
+        <ChevronDown className="w-5 h-5 text-white/50 mx-auto animate-bounce" />
+        <p className="text-xs text-white/50 mt-1">Scroll to explore</p>
       </div>
     </section>
   )

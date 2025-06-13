@@ -86,16 +86,16 @@ export function Pricing() {
   }
 
   return (
-    <section className="bg-gray-50 py-20 lg:py-32">
+    <section className="bg-gray-50 py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h2 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
               Choose your <span className="text-red-600">plan</span>.
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light mb-12">
+            <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light mb-8">
               Transparent pricing with no hidden fees. Get results or your money back.
             </p>
             
@@ -103,7 +103,7 @@ export function Pricing() {
             <div className="inline-flex items-center bg-white rounded-full p-1 shadow-sm border border-gray-200">
               <button
                 onClick={() => setIsAnnual(false)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 text-sm ${
                   !isAnnual 
                     ? 'bg-red-600 text-white shadow-sm' 
                     : 'text-gray-600 hover:text-gray-900'
@@ -113,7 +113,7 @@ export function Pricing() {
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 text-sm ${
                   isAnnual 
                     ? 'bg-red-600 text-white shadow-sm' 
                     : 'text-gray-600 hover:text-gray-900'
@@ -127,7 +127,7 @@ export function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid lg:grid-cols-3 gap-6 mb-12">
           {pricingPlans.map((plan, i) => (
             <div 
               key={i}
@@ -139,57 +139,57 @@ export function Pricing() {
               
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-500 to-amber-500 text-white text-sm font-bold rounded-full">
-                    <Star className="w-4 h-4 fill-current" />
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-red-500 to-amber-500 text-white text-xs font-bold rounded-full">
+                    <Star className="w-3 h-3 fill-current" />
                     Most Popular
                   </div>
                 </div>
               )}
 
               {/* Card */}
-              <div className={`relative bg-white rounded-3xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-500 border-2 ${
+              <div className={`relative bg-white rounded-2xl p-6 h-full shadow-lg hover:shadow-xl transition-all duration-500 border-2 ${
                 plan.popular 
                   ? 'border-red-200 hover:border-red-300' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}>
                 
                 {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${plan.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${plan.color} rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                 
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${plan.color} flex items-center justify-center mb-6 text-white transition-transform duration-300 group-hover:scale-110`}>
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${plan.color} flex items-center justify-center mb-4 text-white transition-transform duration-300 group-hover:scale-110`}>
                     {plan.icon}
                   </div>
                   
                   {/* Plan Info */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-6">{plan.subtitle}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">{plan.name}</h3>
+                  <p className="text-gray-600 mb-4 text-sm">{plan.subtitle}</p>
                   
                   {/* Pricing */}
-                  <div className="mb-6">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-gray-900">
+                  <div className="mb-4">
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-3xl font-bold text-gray-900">
                         {isAnnual ? Math.round(parseInt(plan.price) * 0.8).toLocaleString() : parseInt(plan.price).toLocaleString()}
                       </span>
-                      <span className="text-lg text-gray-600">{plan.period}</span>
+                      <span className="text-base text-gray-600">{plan.period}</span>
                     </div>
                     {isAnnual && (
-                      <div className="text-sm text-green-600 font-medium mt-1">
+                      <div className="text-xs text-green-600 font-medium mt-1">
                         Save {parseInt(plan.price) * 12 * 0.2} AED annually
                       </div>
                     )}
                   </div>
                   
-                  <p className="text-gray-600 mb-8">{plan.description}</p>
+                  <p className="text-gray-600 mb-6 text-sm">{plan.description}</p>
                   
                   {/* Features */}
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, j) => (
-                      <li key={j} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
+                  <ul className="space-y-2 mb-6">
+                    {plan.features.slice(0, 6).map((feature, j) => (
+                      <li key={j} className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-xs leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -197,7 +197,7 @@ export function Pricing() {
                   {/* CTA Button */}
                   <button
                     onClick={handleCallClick}
-                    className={`w-full py-4 px-6 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
+                    className={`w-full py-3 px-4 rounded-full font-bold text-sm transition-all duration-300 transform hover:scale-105 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-red-600 to-amber-500 text-white shadow-lg hover:shadow-xl'
                         : 'bg-gray-900 text-white hover:bg-gray-800 shadow-md hover:shadow-lg'
@@ -206,7 +206,7 @@ export function Pricing() {
                     {plan.buttonText}
                   </button>
                   
-                  <div className="text-center mt-4">
+                  <div className="text-center mt-3">
                     <p className="text-xs text-gray-500">No setup fees • Cancel anytime</p>
                   </div>
                 </div>
@@ -218,41 +218,41 @@ export function Pricing() {
         {/* Enterprise CTA */}
         <div className="text-center">
           <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg border border-gray-200 max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg border border-gray-200 max-w-3xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Need a Custom Solution?
               </h3>
-              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg text-gray-600 mb-6 max-w-xl mx-auto leading-relaxed">
                 We create personalized packages for unique business needs. 
                 Contact us for a custom quote and tailored strategy.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
                 <button
                   onClick={handleCallClick}
-                  className="px-8 py-4 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
+                  className="px-6 py-3 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 text-sm"
                 >
                   Get Custom Quote
                 </button>
                 <Link 
                   href="/demo"
-                  className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-full font-bold hover:bg-gray-50 hover:border-gray-400 transition-all duration-300"
+                  className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-full font-bold hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 text-sm"
                 >
                   View Results
                 </Link>
               </div>
               
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-600">
-                <div className="flex items-center justify-center gap-2">
-                  <Check className="w-4 h-4 text-green-600" />
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-gray-600">
+                <div className="flex items-center justify-center gap-1">
+                  <Check className="w-3 h-3 text-green-600" />
                   Free consultation included
                 </div>
-                <div className="flex items-center justify-center gap-2">
-                  <Check className="w-4 h-4 text-green-600" />
+                <div className="flex items-center justify-center gap-1">
+                  <Check className="w-3 h-3 text-green-600" />
                   Custom strategy
                 </div>
-                <div className="flex items-center justify-center gap-2">
-                  <Check className="w-4 h-4 text-green-600" />
+                <div className="flex items-center justify-center gap-1">
+                  <Check className="w-3 h-3 text-green-600" />
                   No long-term contracts
                 </div>
               </div>

@@ -47,27 +47,27 @@ export function FAQ() {
   }, [])
 
   return (
-    <section className="bg-white py-20 lg:py-32">
+    <section className="bg-white py-12 lg:py-16">
       <div className="max-w-4xl mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-500 to-amber-500 rounded-full mb-8">
-              <HelpCircle className="w-8 h-8 text-white" />
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-red-500 to-amber-500 rounded-full mb-6">
+              <HelpCircle className="w-6 h-6 text-white" />
             </div>
             
-            <h2 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               Everything you need to know about working with VIZIONAIRE
             </p>
           </div>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, i) => (
             <div 
               key={i}
@@ -77,26 +77,26 @@ export function FAQ() {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div 
-                className="bg-gray-50 rounded-2xl hover:bg-gray-100 transition-all duration-300 cursor-pointer border border-gray-200 hover:border-gray-300"
+                className="bg-gray-50 rounded-xl hover:bg-gray-100 transition-all duration-300 cursor-pointer border border-gray-200 hover:border-gray-300"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
-                <div className="p-6">
+                <div className="p-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-bold text-gray-900 pr-4">{faq.question}</h3>
+                    <h3 className="text-base font-bold text-gray-900 pr-4">{faq.question}</h3>
                     <div className="flex-shrink-0">
                       {openIndex === i ? (
-                        <ChevronUp className="w-6 h-6 text-red-600 transition-transform duration-300" />
+                        <ChevronUp className="w-5 h-5 text-red-600 transition-transform duration-300" />
                       ) : (
-                        <ChevronDown className="w-6 h-6 text-red-600 transition-transform duration-300" />
+                        <ChevronDown className="w-5 h-5 text-red-600 transition-transform duration-300" />
                       )}
                     </div>
                   </div>
                   
                   <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    openIndex === i ? 'max-h-96 mt-4' : 'max-h-0'
+                    openIndex === i ? 'max-h-96 mt-3' : 'max-h-0'
                   }`}>
-                    <div className="border-t border-gray-200 pt-4">
-                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                    <div className="border-t border-gray-200 pt-3">
+                      <p className="text-gray-700 leading-relaxed text-sm">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
@@ -106,10 +106,10 @@ export function FAQ() {
         </div>
 
         {/* Bottom CTA */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="bg-gradient-to-r from-red-50 to-amber-50 rounded-3xl p-8 border border-red-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Still have questions?</h3>
-            <p className="text-gray-600 mb-6">
+        <div className={`text-center mt-12 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="bg-gradient-to-r from-red-50 to-amber-50 rounded-2xl p-6 border border-red-100">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Still have questions?</h3>
+            <p className="text-gray-600 mb-4 text-sm">
               Our team is here to help. Get personalized answers and a custom strategy for your business.
             </p>
             <button 
@@ -117,10 +117,10 @@ export function FAQ() {
                 const message = encodeURIComponent('Hello! I have some questions about VIZIONAIRE services. Can we schedule a consultation?')
                 window.open(`https://wa.me/971565663377?text=${message}`, '_blank')
               }}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 text-sm"
             >
               Contact Our Team
-              <ChevronDown className="w-5 h-5 rotate-[-90deg]" />
+              <ChevronDown className="w-4 h-4 rotate-[-90deg]" />
             </button>
           </div>
         </div>
