@@ -62,7 +62,7 @@ export function Hero() {
               <span className="bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent">
                 Vision
               </span>
-              {" "}your{" "}
+              {" "}our{" "}
               <span className="bg-gradient-to-r from-orange-500 via-red-500 to-rose-600 bg-clip-text text-transparent">
                 Reality
               </span>
